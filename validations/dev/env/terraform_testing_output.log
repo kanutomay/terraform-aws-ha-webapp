@@ -1,0 +1,403 @@
+
+State List after deployment:
+module.alb.data.aws_caller_identity.current
+module.alb.data.aws_iam_policy_document.s3_alb_access_logs_bucket_policy
+module.alb.data.aws_region.current
+module.alb.aws_lb.this
+module.alb.aws_lb_listener.this
+module.alb.aws_lb_target_group.this
+module.alb.aws_s3_bucket.logs
+module.alb.aws_s3_bucket_lifecycle_configuration.logs
+module.alb.aws_s3_bucket_policy.alb_access_logs
+module.alb.aws_s3_bucket_public_access_block.logs
+module.alb.aws_s3_bucket_server_side_encryption_configuration.logs
+module.alb.aws_security_group.this
+module.alb.aws_vpc_security_group_egress_rule.http_to_vpc
+module.alb.aws_vpc_security_group_ingress_rule.http_in
+module.alb.aws_wafv2_web_acl.this[0]
+module.alb.aws_wafv2_web_acl_association.this[0]
+module.compute.data.aws_ami.amazon_linux
+module.compute.data.aws_default_tags.current
+module.compute.data.aws_ec2_instance_type.selected
+module.compute.data.aws_ec2_instance_type_offerings.available["us-east-1a"]
+module.compute.data.aws_ec2_instance_type_offerings.available["us-east-1b"]
+module.compute.data.aws_iam_policy_document.compute_assume_role
+module.compute.aws_autoscaling_group.this
+module.compute.aws_autoscaling_policy.this
+module.compute.aws_iam_instance_profile.this
+module.compute.aws_iam_role.this
+module.compute.aws_iam_role_policy_attachment.this
+module.compute.aws_launch_template.this
+module.compute.aws_security_group.this
+module.compute.aws_vpc_security_group_egress_rule.all_out
+module.compute.aws_vpc_security_group_ingress_rule.http_from_alb
+module.network.data.aws_availability_zones.available
+module.network.data.aws_region.current
+module.network.aws_internet_gateway.this
+module.network.aws_nat_gateway.this
+module.network.aws_route_table.private
+module.network.aws_route_table.public
+module.network.aws_route_table_association.private["us-east-1a"]
+module.network.aws_route_table_association.private["us-east-1b"]
+module.network.aws_route_table_association.public["us-east-1a"]
+module.network.aws_route_table_association.public["us-east-1b"]
+module.network.aws_subnet.private["us-east-1a"]
+module.network.aws_subnet.private["us-east-1b"]
+module.network.aws_subnet.public["us-east-1a"]
+module.network.aws_subnet.public["us-east-1b"]
+module.network.aws_vpc.this
+module.network.aws_vpc_endpoint.s3
+module.network.aws_vpc_endpoint_route_table_association.s3_private
+module.observability.data.aws_caller_identity.current
+module.observability.data.aws_iam_policy_document.s3_flow_logs_bucket_policy
+module.observability.data.aws_region.current
+module.observability.aws_cloudwatch_dashboard.this
+module.observability.aws_cloudwatch_metric_alarm.alb_5xx_errors
+module.observability.aws_cloudwatch_metric_alarm.alb_targets
+module.observability.aws_cloudwatch_metric_alarm.external_availability
+module.observability.aws_cloudwatch_metric_alarm.high_cpu
+module.observability.aws_cloudwatch_metric_alarm.low_healthy_targets
+module.observability.aws_cloudwatch_metric_alarm.target_5xx_errors
+module.observability.aws_flow_log.vpc
+module.observability.aws_route53_health_check.alb
+module.observability.aws_s3_bucket.logs
+module.observability.aws_s3_bucket_lifecycle_configuration.logs
+module.observability.aws_s3_bucket_policy.vpc_flow_logs
+module.observability.aws_s3_bucket_public_access_block.logs
+module.observability.aws_s3_bucket_server_side_encryption_configuration.logs
+module.observability.aws_sns_topic.this
+module.observability.aws_sns_topic_subscription.this["john.doe@example.com"]
+module.observability.aws_sns_topic_subscription.this["jane.doe@example.com"]
+
+Check targets health status:
+--------------------------------------------
+|           DescribeTargetHealth           |
++----------------------+-----------+-------+
+|  i-0e83801cd9f43649c |  healthy  |  None |
+|  i-0354776d205e5cb06 |  healthy  |  None |
++----------------------+-----------+-------+
+
+Check instances load balanced across AZs:
+i-0354776d205e5cb06 us-east-1b
+i-0e83801cd9f43649c us-east-1a
+i-0e83801cd9f43649c us-east-1a
+i-0e83801cd9f43649c us-east-1a
+i-0354776d205e5cb06 us-east-1b
+i-0e83801cd9f43649c us-east-1a
+
+i-0354776d205e5cb06 us-east-1b
+i-0e83801cd9f43649c us-east-1a
+i-0e83801cd9f43649c us-east-1a
+i-0354776d205e5cb06 us-east-1b
+i-0e83801cd9f43649c us-east-1a
+i-0e83801cd9f43649c us-east-1a
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0e83801cd9f43649c us-east-1a
+i-0354776d205e5cb06 us-east-1b
+
+Check ASG functionality:
+---------------------------------------------------------------
+|                  DescribeAutoScalingGroups                  |
++----------------------+-------------+------------+-----------+
+|  i-0354776d205e5cb06 |  us-east-1b |  InService |  Healthy  |
+|  i-0e83801cd9f43649c |  us-east-1a |  InService |  Healthy  |
++----------------------+-------------+------------+-----------+
+
+Check EC2 IMDSv2 functionality:
+[
+    {
+        "id": "i-0354776d205e5cb06",
+        "imds": "required",
+        "tags": [
+            {
+                "Key": "aws:ec2launchtemplate:id",
+                "Value": "lt-02dab84c5b77a02cc"
+            },
+            {
+                "Key": "Project",
+                "Value": "ha-webapp"
+            },
+            {
+                "Key": "aws:ec2launchtemplate:version",
+                "Value": "1"
+            },
+            {
+                "Key": "Name",
+                "Value": "ha-webapp_dev_web"
+            },
+            {
+                "Key": "Environment",
+                "Value": "dev"
+            },
+            {
+                "Key": "ManagedBy",
+                "Value": "terraform"
+            }
+        ]
+    },
+    {
+        "id": "i-0e83801cd9f43649c",
+        "imds": "required",
+        "tags": [
+            {
+                "Key": "Project",
+                "Value": "ha-webapp"
+            },
+            {
+                "Key": "aws:ec2launchtemplate:id",
+                "Value": "lt-02dab84c5b77a02cc"
+            },
+            {
+                "Key": "Name",
+                "Value": "ha-webapp_dev_web"
+            },
+            {
+                "Key": "aws:ec2launchtemplate:version",
+                "Value": "1"
+            },
+            {
+                "Key": "Environment",
+                "Value": "dev"
+            },
+            {
+                "Key": "ManagedBy",
+                "Value": "terraform"
+            }
+        ]
+    }
+]
+
+Check WAF blocking functionality:
+HTTP/1.1 403 Forbidden
+Server: awselb/2.0
+Date: Thu, 26 Nov 2026 01:35:24 GMT
+Content-Type: text/html
+Content-Length: 118
+Connection: keep-alive
+
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+</body>
+</html>
+HTTP/1.1 403 Forbidden
+Server: awselb/2.0
+Date: Thu, 26 Nov 2026 01:35:43 GMT
+Content-Type: text/html
+Content-Length: 118
+Connection: keep-alive
+
+<html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+</body>
+</html>
+
+
+
+
+Stopping httpd service...
+[ssm-user@ip-10-69-129-135 bin]$ date
+Thu Nov 26 01:45:14 UTC 2026
+[ssm-user@ip-10-69-129-135 bin]$
+[ssm-user@ip-10-69-129-135 bin]$ systemctl status httpd
+sudo systemctl stop httpd
+systemctl status httpd
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: active (running) since Thu 2026-11-26 01:22:36 UTC; 23min ago
+       Docs: man:httpd.service(8)
+   Main PID: 4165 (httpd)
+     Status: "Total requests: 468; Idle/Busy workers 100/0;Requests/sec: 0.337; Bytes served/sec: 263 B/sec"
+      Tasks: 230 (limit: 1016)
+     Memory: 20.7M
+        CPU: 1.871s
+     CGroup: /system.slice/httpd.service
+             ├─ 4165 /usr/sbin/httpd -DFOREGROUND
+             ├─ 4286 /usr/sbin/httpd -DFOREGROUND
+             ├─ 4288 /usr/sbin/httpd -DFOREGROUND
+             ├─ 4289 /usr/sbin/httpd -DFOREGROUND
+             ├─ 4290 /usr/sbin/httpd -DFOREGROUND
+             └─26140 /usr/sbin/httpd -DFOREGROUND
+○ httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: inactive (dead) since Thu 2026-11-26 01:45:48 UTC; 122ms ago
+   Duration: 23min 11.646s
+       Docs: man:httpd.service(8)
+    Process: 4165 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=0/SUCCESS)
+   Main PID: 4165 (code=exited, status=0/SUCCESS)
+     Status: "Total requests: 468; Idle/Busy workers 100/0;Requests/sec: 0.337; Bytes served/sec: 263 B/sec"
+        CPU: 1.893s
+
+Warning: some journal files were not opened due to insufficient permissions.
+[ssm-user@ip-10-69-129-135 bin]$
+[ssm-user@ip-10-69-129-135 bin]$ systemctl status httpd
+○ httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: inactive (dead) since Thu 2026-11-26 01:45:48 UTC; 19s ago
+   Duration: 23min 11.646s
+       Docs: man:httpd.service(8)
+    Process: 4165 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=0/SUCCESS)
+   Main PID: 4165 (code=exited, status=0/SUCCESS)
+     Status: "Total requests: 468; Idle/Busy workers 100/0;Requests/sec: 0.337; Bytes served/sec: 263 B/sec"
+        CPU: 1.893s
+
+Warning: some journal files were not opened due to insufficient permissions.
+[ssm-user@ip-10-69-129-135 bin]$
+[ssm-user@ip-10-69-129-135 bin]$
+[ssm-user@ip-10-69-129-135 bin]$ ping google.com
+PING google.com (64.233.180.138) 56(84) bytes of data.
+64 bytes from on-in-f138.1e100.net (64.233.180.138): icmp_seq=1 ttl=105 time=3.18 ms
+64 bytes from pe-in-f138.1e100.net (64.233.180.138): icmp_seq=2 ttl=105 time=2.39 ms
+64 bytes from pe-in-f138.1e100.net (64.233.180.138): icmp_seq=3 ttl=105 time=2.42 ms
+^C
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 2.385/2.660/3.178/0.366 ms
+[ssm-user@ip-10-69-129-135 bin]$ ping google.com -i 3
+PING google.com (64.233.180.102) 56(84) bytes of data.
+64 bytes from pe-in-f102.1e100.net (64.233.180.102): icmp_seq=1 ttl=105 time=3.64 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=2 ttl=105 time=2.79 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=3 ttl=105 time=2.80 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=4 ttl=105 time=2.81 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=5 ttl=105 time=2.86 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=6 ttl=105 time=2.68 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=7 ttl=105 time=2.84 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=8 ttl=105 time=2.65 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=9 ttl=105 time=2.67 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=10 ttl=105 time=2.67 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=11 ttl=105 time=2.69 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=12 ttl=105 time=2.67 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=13 ttl=105 time=2.70 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=14 ttl=105 time=2.66 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=15 ttl=105 time=2.67 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=16 ttl=105 time=2.66 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=17 ttl=105 time=2.67 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=18 ttl=105 time=2.67 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=19 ttl=105 time=2.69 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=20 ttl=105 time=2.71 ms
+64 bytes from on-in-f102.1e100.net (64.233.180.102): icmp_seq=21 ttl=105 time=2.67 ms
+^C
+--- google.com ping statistics ---
+21 packets transmitted, 21 received, 0% packet loss, time 60060ms
+rtt min/avg/max/mdev = 2.650/2.754/3.644/0.208 ms
+[ssm-user@ip-10-69-129-135 bin]$
+
+Exiting session with sessionId:
+
+Testing ELB healthchecks after Apache shutdown:
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+--------------------------------------------
+|           DescribeTargetHealth           |
++----------------------+-----------+-------+
+|  i-04159ae2bf1c156a4 |  healthy  |  None |
+|  i-0354776d205e5cb06 |  healthy  |  None |
++----------------------+-----------+-------+
+i-0354776d205e5cb06 us-east-1b
+i-04159ae2bf1c156a4 us-east-1a
+i-04159ae2bf1c156a4 us-east-1a
+i-04159ae2bf1c156a4 us-east-1a
+i-0354776d205e5cb06 us-east-1b
+i-04159ae2bf1c156a4 us-east-1a
+
+
+Test HA through instance termination:
+i-04159ae2bf1c156a4 us-east-1a
+i-04159ae2bf1c156a4 us-east-1a
+
+i-0354776d205e5cb06 us-east-1b
+
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+-------------------------------------------------------------------
+|                      DescribeTargetHealth                       |
++----------------------+------------+-----------------------------+
+|  i-0b77fc05b6934e8f1 |  unhealthy |  Target.FailedHealthChecks  |
+|  i-0354776d205e5cb06 |  healthy   |  None                       |
++----------------------+------------+-----------------------------+
+-------------------------------------------------------------------
+|                      DescribeTargetHealth                       |
++----------------------+------------+-----------------------------+
+|  i-0b77fc05b6934e8f1 |  unhealthy |  Target.FailedHealthChecks  |
+|  i-0354776d205e5cb06 |  healthy   |  None                       |
++----------------------+------------+-----------------------------+
+--------------------------------------------
+|           DescribeTargetHealth           |
++----------------------+-----------+-------+
+|  i-0b77fc05b6934e8f1 |  healthy  |  None |
+|  i-0354776d205e5cb06 |  healthy  |  None |
++----------------------+-----------+-------+
+i-0354776d205e5cb06 us-east-1b
+i-0b77fc05b6934e8f1 us-east-1a
+i-0354776d205e5cb06 us-east-1b
+i-0354776d205e5cb06 us-east-1b
+i-0b77fc05b6934e8f1 us-east-1a
+i-0b77fc05b6934e8f1 us-east-1a
+
+Test ALB access and VPC flow logs write to S3:
+2026-11-25 20:50:07       3795 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0150Z_3.208.74.61_593durpy.log.gz
+2026-11-25 20:48:27        594 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0150Z_3.208.74.61_5jfh4gq8.log.gz
+2026-11-25 20:55:07      12026 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0155Z_100.28.242.126_11vruios.log.gz
+2026-11-25 20:55:07      11227 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0155Z_3.208.74.61_1t2oicsz.log.gz
+2026-11-25 20:58:00       5809 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0200Z_100.28.242.126_144ndtzk.log.gz
+2026-11-25 20:58:32       2125 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0200Z_100.28.242.126_2iqu2egu.log.gz
+2026-11-25 21:00:02       4124 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0200Z_100.28.242.126_3skw02at.log.gz
+2026-11-25 21:00:12       3243 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0200Z_3.208.74.61_2e8q00pm.log.gz
+2026-11-25 20:58:32       1489 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0200Z_3.208.74.61_2ldk3j7m.log.gz
+2026-11-25 20:58:00       6452 AWSLogs/123456789012/elasticloadbalancing/us-east-1/2026/11/26/123456789012_elasticloadbalancing_us-east-1_app.ha-webapp-dev-alb.5ec13aba97d15899_20261126T0200Z_3.208.74.61_2wo62cev.log.gz
+2026-11-25 20:34:44      16312 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0130Z_cb47d4ed.log.parquet
+2026-11-25 20:44:43       7186 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0135Z_100c8d90.log.parquet
+2026-11-25 20:39:44      16264 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0135Z_e00497dd.log.parquet
+2026-11-25 20:49:44       7913 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0140Z_7e9a6953.log.parquet
+2026-11-25 20:44:43      17066 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0140Z_c2f6e29f.log.parquet
+2026-11-25 20:54:44       8971 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0145Z_cc2349b2.log.parquet
+2026-11-25 20:49:44      21565 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0145Z_dd23c9eb.log.parquet
+2026-11-25 20:54:44      19908 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0150Z_b8318731.log.parquet
+2026-11-25 20:59:44       7824 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0150Z_d518fbf8.log.parquet
+2026-11-25 20:59:44      20515 AWSLogs/123456789012/vpcflowlogs/us-east-1/2026/11/26/01/123456789012_vpcflowlogs_us-east-1_fl-0cf480dfa1c7b93d6_20261126T0155Z_d7846635.log.parquet
+

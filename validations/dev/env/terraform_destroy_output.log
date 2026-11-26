@@ -1,0 +1,2272 @@
+module.compute.data.aws_ec2_instance_type.selected: Reading...
+module.compute.data.aws_iam_policy_document.compute_assume_role: Reading...
+module.compute.data.aws_ami.amazon_linux: Reading...
+module.network.aws_vpc.this: Refreshing state... [id=vpc-088e67147fe9deb9d]
+module.observability.data.aws_caller_identity.current: Reading...
+module.observability.data.aws_region.current: Reading...
+module.alb.data.aws_region.current: Reading...
+module.alb.data.aws_caller_identity.current: Reading...
+module.network.data.aws_region.current: Reading...
+module.compute.data.aws_iam_policy_document.compute_assume_role: Read complete after 0s [id=2851119427]
+module.alb.data.aws_region.current: Read complete after 0s [id=us-east-1]
+module.compute.data.aws_default_tags.current: Reading...
+module.observability.data.aws_region.current: Read complete after 0s [id=us-east-1]
+module.network.data.aws_availability_zones.available: Reading...
+module.compute.data.aws_default_tags.current: Read complete after 0s [id=aws]
+module.network.data.aws_region.current: Read complete after 0s [id=us-east-1]
+module.observability.aws_sns_topic.this: Refreshing state... [id=arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic]
+module.compute.aws_iam_role.this: Refreshing state... [id=ha-webapp-dev-compute-role]
+module.observability.data.aws_caller_identity.current: Read complete after 0s [id=123456789012]
+module.observability.aws_s3_bucket.logs: Refreshing state... [id=ha-webapp-dev-123456789012-flowlogs]
+module.alb.aws_wafv2_web_acl.this[0]: Refreshing state... [id=6e7d5243-e386-4de6-bd4c-2021a91a111f]
+module.alb.data.aws_caller_identity.current: Read complete after 0s [id=123456789012]
+module.alb.aws_s3_bucket.logs: Refreshing state... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.compute.data.aws_ec2_instance_type.selected: Read complete after 1s [id=t3.micro]
+module.observability.aws_sns_topic_subscription.this["john.doe@example.com"]: Refreshing state... [id=arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:0dc52387-069c-4365-941c-d81365a6a2b8]
+module.observability.aws_sns_topic_subscription.this["jane.doe@example.com"]: Refreshing state... [id=arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:c814afbb-90f8-469c-88d1-7edc6ceef04a]
+module.network.data.aws_availability_zones.available: Read complete after 1s [id=us-east-1]
+module.compute.aws_iam_role_policy_attachment.this: Refreshing state... [id=ha-webapp-dev-compute-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+module.compute.aws_iam_instance_profile.this: Refreshing state... [id=ha-webapp-dev-compute-instance-profile]
+module.compute.data.aws_ami.amazon_linux: Read complete after 1s [id=ami-062caee4b7b602eb0]
+module.network.aws_internet_gateway.this: Refreshing state... [id=igw-0aa20e2e38df674ca]
+module.alb.aws_security_group.this: Refreshing state... [id=sg-036a8f8f67388f897]
+module.network.aws_subnet.public["us-east-1b"]: Refreshing state... [id=subnet-04323afe875a3811b]
+module.network.aws_subnet.private["us-east-1b"]: Refreshing state... [id=subnet-059f39ffba0a963f3]
+module.alb.aws_lb_target_group.this: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def]
+module.network.aws_subnet.private["us-east-1a"]: Refreshing state... [id=subnet-061196c4cf8f6bc96]
+module.network.aws_vpc_endpoint.s3: Refreshing state... [id=vpce-0c2d794561be891ee]
+module.network.aws_subnet.public["us-east-1a"]: Refreshing state... [id=subnet-06bde853763442c08]
+module.compute.aws_security_group.this: Refreshing state... [id=sg-02b744d5375b052df]
+module.network.aws_route_table.public: Refreshing state... [id=rtb-033ec4239ca78656f]
+module.network.aws_nat_gateway.this: Refreshing state... [id=nat-1f9e5176d7a0d39f9]
+module.alb.aws_vpc_security_group_ingress_rule.http_in: Refreshing state... [id=sgr-05db554c66445505c]
+module.alb.aws_vpc_security_group_egress_rule.http_to_vpc: Refreshing state... [id=sgr-06888b58ad6e66078]
+module.compute.aws_vpc_security_group_egress_rule.all_out: Refreshing state... [id=sgr-014607ebb5040e2a5]
+module.compute.aws_vpc_security_group_ingress_rule.http_from_alb: Refreshing state... [id=sgr-027c7036e9887be9c]
+module.compute.data.aws_ec2_instance_type_offerings.available["us-east-1b"]: Reading...
+module.compute.data.aws_ec2_instance_type_offerings.available["us-east-1a"]: Reading...
+module.network.aws_route_table.private: Refreshing state... [id=rtb-0fd4828d8d830c1ae]
+module.network.aws_route_table_association.public["us-east-1a"]: Refreshing state... [id=rtbassoc-07bcbb7ebfc5afd43]
+module.network.aws_route_table_association.public["us-east-1b"]: Refreshing state... [id=rtbassoc-0d76161c95712344a]
+module.compute.data.aws_ec2_instance_type_offerings.available["us-east-1b"]: Read complete after 0s [id=us-east-1]
+module.network.aws_route_table_association.private["us-east-1a"]: Refreshing state... [id=rtbassoc-05345b8ce3f2b78b8]
+module.network.aws_route_table_association.private["us-east-1b"]: Refreshing state... [id=rtbassoc-072df298006e5cb12]
+module.compute.data.aws_ec2_instance_type_offerings.available["us-east-1a"]: Read complete after 0s [id=us-east-1]
+module.compute.aws_launch_template.this: Refreshing state... [id=lt-02dab84c5b77a02cc]
+module.compute.aws_autoscaling_group.this: Refreshing state... [id=ha-webapp-dev-compute-asg]
+module.observability.aws_s3_bucket_public_access_block.logs: Refreshing state... [id=ha-webapp-dev-123456789012-flowlogs]
+module.observability.aws_s3_bucket_server_side_encryption_configuration.logs: Refreshing state... [id=ha-webapp-dev-123456789012-flowlogs]
+module.alb.data.aws_iam_policy_document.s3_alb_access_logs_bucket_policy: Reading...
+module.alb.aws_s3_bucket_public_access_block.logs: Refreshing state... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.alb.aws_s3_bucket_server_side_encryption_configuration.logs: Refreshing state... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.observability.aws_s3_bucket_lifecycle_configuration.logs: Refreshing state... [id=ha-webapp-dev-123456789012-flowlogs]
+module.alb.aws_s3_bucket_lifecycle_configuration.logs: Refreshing state... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.alb.data.aws_iam_policy_document.s3_alb_access_logs_bucket_policy: Read complete after 0s [id=187408295]
+module.observability.data.aws_iam_policy_document.s3_flow_logs_bucket_policy: Reading...
+module.alb.aws_s3_bucket_policy.alb_access_logs: Refreshing state... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.observability.data.aws_iam_policy_document.s3_flow_logs_bucket_policy: Read complete after 1s [id=1134756561]
+module.observability.aws_s3_bucket_policy.vpc_flow_logs: Refreshing state... [id=ha-webapp-dev-123456789012-flowlogs]
+module.network.aws_vpc_endpoint_route_table_association.s3_private: Refreshing state... [id=a-vpce-0c2d794561be891ee1328491333]
+module.alb.aws_lb.this: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899]
+module.observability.aws_flow_log.vpc: Refreshing state... [id=fl-0cf480dfa1c7b93d6]
+module.compute.aws_autoscaling_policy.this: Refreshing state... [id=ha-webapp-dev-compute-scale-policy]
+module.observability.aws_cloudwatch_metric_alarm.high_cpu: Refreshing state... [id=ha-webapp-dev-high-cpu-alarm]
+module.alb.aws_wafv2_web_acl_association.this[0]: Refreshing state... [id=arn:aws:wafv2:us-east-1:123456789012:regional/webacl/ha-webapp-dev-alb-waf/6e7d5243-e386-4de6-bd4c-2021a91a111f,arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899]
+module.observability.aws_route53_health_check.alb: Refreshing state... [id=4da21572-5155-5102-0745-520128ede921]
+module.observability.aws_cloudwatch_metric_alarm.target_5xx_errors: Refreshing state... [id=ha-webapp-dev-target-5xx-errors-alarm]
+module.observability.aws_cloudwatch_metric_alarm.alb_5xx_errors: Refreshing state... [id=ha-webapp-dev-alb-5xx-errors-alarm]
+module.alb.aws_lb_listener.this: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/ha-webapp-dev-alb/5ec13aba97d15899/fe5f7f9ffc2c20ae]
+module.observability.aws_cloudwatch_metric_alarm.low_healthy_targets: Refreshing state... [id=ha-webapp-dev-low-healthy-alb-targets-alarm]
+module.observability.aws_cloudwatch_metric_alarm.alb_targets: Refreshing state... [id=ha-webapp-dev-unhealthy-alb-targets-alarm]
+module.observability.aws_cloudwatch_metric_alarm.external_availability: Refreshing state... [id=ha-webapp-dev-external-availability-alarm]
+module.observability.aws_cloudwatch_dashboard.this: Refreshing state... [id=ha-webapp-dev-observability-dashboard]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.alb.aws_lb.this will be destroyed
+  - resource "aws_lb" "this" {
+      - arn                                                          = "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899" -> null
+      - arn_suffix                                                   = "app/ha-webapp-dev-alb/5ec13aba97d15899" -> null
+      - client_keep_alive                                            = 3600 -> null
+      - desync_mitigation_mode                                       = "defensive" -> null
+      - dns_name                                                     = "ha-webapp-dev-alb-1927104723.us-east-1.elb.amazonaws.com" -> null
+      - drop_invalid_header_fields                                   = true -> null
+      - enable_cross_zone_load_balancing                             = true -> null
+      - enable_deletion_protection                                   = false -> null
+      - enable_http2                                                 = true -> null
+      - enable_prefix_for_ipv6_source_nat                            = "off" -> null
+      - enable_tls_version_and_cipher_suite_headers                  = false -> null
+      - enable_waf_fail_open                                         = false -> null
+      - enable_xff_client_port                                       = false -> null
+      - enable_zonal_shift                                           = false -> null
+      - id                                                           = "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899" -> null
+      - idle_timeout                                                 = 60 -> null
+      - internal                                                     = false -> null
+      - ip_address_type                                              = "ipv4" -> null
+      - load_balancer_type                                           = "application" -> null
+      - name                                                         = "ha-webapp-dev-alb" -> null
+      - preserve_host_header                                         = false -> null
+      - region                                                       = "us-east-1" -> null
+      - security_groups                                              = [
+          - "sg-036a8f8f67388f897",
+        ] -> null
+      - subnets                                                      = [
+          - "subnet-04323afe875a3811b",
+          - "subnet-06bde853763442c08",
+        ] -> null
+      - tags                                                         = {
+          - "Name" = "ha-webapp_dev_alb"
+        } -> null
+      - tags_all                                                     = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_alb"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                                                       = "vpc-088e67147fe9deb9d" -> null
+      - xff_header_processing_mode                                   = "append" -> null
+      - zone_id                                                      = "Z35SXDOTRQ7X7K" -> null
+        # (3 unchanged attributes hidden)
+
+      - access_logs {
+          - bucket  = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+          - enabled = true -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - connection_logs {
+          - enabled = false -> null
+            # (2 unchanged attributes hidden)
+        }
+
+      - health_check_logs {
+          - enabled = false -> null
+            # (2 unchanged attributes hidden)
+        }
+
+      - subnet_mapping {
+          - subnet_id            = "subnet-04323afe875a3811b" -> null
+            # (4 unchanged attributes hidden)
+        }
+      - subnet_mapping {
+          - subnet_id            = "subnet-06bde853763442c08" -> null
+            # (4 unchanged attributes hidden)
+        }
+    }
+
+  # module.alb.aws_lb_listener.this will be destroyed
+  - resource "aws_lb_listener" "this" {
+      - arn                                                                 = "arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/ha-webapp-dev-alb/5ec13aba97d15899/fe5f7f9ffc2c20ae" -> null
+      - id                                                                  = "arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/ha-webapp-dev-alb/5ec13aba97d15899/fe5f7f9ffc2c20ae" -> null
+      - load_balancer_arn                                                   = "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899" -> null
+      - port                                                                = 80 -> null
+      - protocol                                                            = "HTTP" -> null
+      - region                                                              = "us-east-1" -> null
+      - routing_http_response_server_enabled                                = true -> null
+      - tags                                                                = {} -> null
+      - tags_all                                                            = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+        # (11 unchanged attributes hidden)
+
+      - default_action {
+          - order            = 1 -> null
+          - target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def" -> null
+          - type             = "forward" -> null
+        }
+    }
+
+  # module.alb.aws_lb_target_group.this will be destroyed
+  - resource "aws_lb_target_group" "this" {
+      - arn                                = "arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def" -> null
+      - arn_suffix                         = "targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def" -> null
+      - deregistration_delay               = "30" -> null
+      - id                                 = "arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def" -> null
+      - ip_address_type                    = "ipv4" -> null
+      - lambda_multi_value_headers_enabled = false -> null
+      - load_balancer_arns                 = [
+          - "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899",
+        ] -> null
+      - load_balancing_algorithm_type      = "round_robin" -> null
+      - load_balancing_anomaly_mitigation  = "off" -> null
+      - load_balancing_cross_zone_enabled  = "use_load_balancer_configuration" -> null
+      - name                               = "ha-webapp-dev-alb-tg" -> null
+      - port                               = 80 -> null
+      - protocol                           = "HTTP" -> null
+      - protocol_version                   = "HTTP1" -> null
+      - proxy_protocol_v2                  = false -> null
+      - region                             = "us-east-1" -> null
+      - slow_start                         = 0 -> null
+      - tags                               = {
+          - "Name" = "ha-webapp_dev_alb_tg"
+        } -> null
+      - tags_all                           = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_alb_tg"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - target_control_port                = 0 -> null
+      - target_type                        = "instance" -> null
+      - vpc_id                             = "vpc-088e67147fe9deb9d" -> null
+        # (1 unchanged attribute hidden)
+
+      - health_check {
+          - enabled             = true -> null
+          - healthy_threshold   = 5 -> null
+          - interval            = 30 -> null
+          - matcher             = "200" -> null
+          - path                = "/" -> null
+          - port                = "traffic-port" -> null
+          - protocol            = "HTTP" -> null
+          - timeout             = 5 -> null
+          - unhealthy_threshold = 2 -> null
+        }
+
+      - stickiness {
+          - cookie_duration = 86400 -> null
+          - enabled         = false -> null
+          - type            = "lb_cookie" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - target_failover {}
+
+      - target_group_health {
+          - dns_failover {
+              - minimum_healthy_targets_count      = "1" -> null
+              - minimum_healthy_targets_percentage = "off" -> null
+            }
+          - unhealthy_state_routing {
+              - minimum_healthy_targets_count      = 1 -> null
+              - minimum_healthy_targets_percentage = "off" -> null
+            }
+        }
+
+      - target_health_state {}
+    }
+
+  # module.alb.aws_s3_bucket.logs will be destroyed
+  - resource "aws_s3_bucket" "logs" {
+      - arn                         = "arn:aws:s3:::ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - bucket                      = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - bucket_domain_name          = "ha-webapp-dev-123456789012-alb-access-logs.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "us-east-1" -> null
+      - bucket_regional_domain_name = "ha-webapp-dev-123456789012-alb-access-logs.s3.us-east-1.amazonaws.com" -> null
+      - force_destroy               = true -> null
+      - hosted_zone_id              = "Z3AQBSTGFYJSTF" -> null
+      - id                          = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - object_lock_enabled         = false -> null
+      - policy                      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:PutObject"
+                      - Condition = {
+                          - ArnLike      = {
+                              - "aws:SourceArn" = "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/*"
+                            }
+                          - StringEquals = {
+                              - "aws:SourceAccount" = "123456789012"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "logdelivery.elasticloadbalancing.amazonaws.com"
+                        }
+                      - Resource  = "arn:aws:s3:::ha-webapp-dev-123456789012-alb-access-logs/AWSLogs/123456789012/*"
+                      - Sid       = "AWSLogDeliveryWrite"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region                      = "us-east-1" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {
+          - "Name" = "ha-webapp_dev_alb_access_logs_bucket"
+        } -> null
+      - tags_all                    = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_alb_access_logs_bucket"
+          - "Project"     = "ha-webapp"
+        } -> null
+        # (2 unchanged attributes hidden)
+
+      - grant {
+          - id          = "44116eeac6f31ee5e84cf4737ef49653f2b86af844ab336fce14e50f4f8d3719" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - lifecycle_rule {
+          - abort_incomplete_multipart_upload_days = 0 -> null
+          - enabled                                = true -> null
+          - id                                     = "alb-access-logs" -> null
+          - tags                                   = {} -> null
+            # (1 unchanged attribute hidden)
+
+          - expiration {
+              - days                         = 365 -> null
+              - expired_object_delete_marker = false -> null
+                # (1 unchanged attribute hidden)
+            }
+
+          - transition {
+              - days          = 30 -> null
+              - storage_class = "STANDARD_IA" -> null
+                # (1 unchanged attribute hidden)
+            }
+          - transition {
+              - days          = 90 -> null
+              - storage_class = "GLACIER" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # module.alb.aws_s3_bucket_lifecycle_configuration.logs will be destroyed
+  - resource "aws_s3_bucket_lifecycle_configuration" "logs" {
+      - bucket                                 = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - id                                     = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - region                                 = "us-east-1" -> null
+      - transition_default_minimum_object_size = "all_storage_classes_128K" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - id     = "alb-access-logs" -> null
+          - status = "Enabled" -> null
+            # (1 unchanged attribute hidden)
+
+          - expiration {
+              - days                         = 365 -> null
+              - expired_object_delete_marker = false -> null
+            }
+
+          - filter {
+                # (1 unchanged attribute hidden)
+            }
+
+          - transition {
+              - days          = 30 -> null
+              - storage_class = "STANDARD_IA" -> null
+            }
+          - transition {
+              - days          = 90 -> null
+              - storage_class = "GLACIER" -> null
+            }
+        }
+    }
+
+  # module.alb.aws_s3_bucket_policy.alb_access_logs will be destroyed
+  - resource "aws_s3_bucket_policy" "alb_access_logs" {
+      - bucket = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - id     = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - policy = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:PutObject"
+                      - Condition = {
+                          - ArnLike      = {
+                              - "aws:SourceArn" = "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/*"
+                            }
+                          - StringEquals = {
+                              - "aws:SourceAccount" = "123456789012"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "logdelivery.elasticloadbalancing.amazonaws.com"
+                        }
+                      - Resource  = "arn:aws:s3:::ha-webapp-dev-123456789012-alb-access-logs/AWSLogs/123456789012/*"
+                      - Sid       = "AWSLogDeliveryWrite"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region = "us-east-1" -> null
+    }
+
+  # module.alb.aws_s3_bucket_public_access_block.logs will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "logs" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - id                      = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "us-east-1" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # module.alb.aws_s3_bucket_server_side_encryption_configuration.logs will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "logs" {
+      - bucket                = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - id                    = "ha-webapp-dev-123456789012-alb-access-logs" -> null
+      - region                = "us-east-1" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # module.alb.aws_security_group.this will be destroyed
+  - resource "aws_security_group" "this" {
+      - arn                    = "arn:aws:ec2:us-east-1:123456789012:security-group/sg-036a8f8f67388f897" -> null
+      - description            = "Security group for the ALB" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "10.69.129.0/24",
+                ]
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - id                     = "sg-036a8f8f67388f897" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - name                   = "ha-webapp-dev-alb-sg" -> null
+      - owner_id               = "123456789012" -> null
+      - region                 = "us-east-1" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "ha-webapp_dev_alb_sg"
+        } -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_alb_sg"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                 = "vpc-088e67147fe9deb9d" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.alb.aws_vpc_security_group_egress_rule.http_to_vpc will be destroyed
+  - resource "aws_vpc_security_group_egress_rule" "http_to_vpc" {
+      - arn                    = "arn:aws:ec2:us-east-1:123456789012:security-group-rule/sgr-06888b58ad6e66078" -> null
+      - cidr_ipv4              = "10.69.129.0/24" -> null
+      - from_port              = 80 -> null
+      - id                     = "sgr-06888b58ad6e66078" -> null
+      - ip_protocol            = "tcp" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-036a8f8f67388f897" -> null
+      - security_group_rule_id = "sgr-06888b58ad6e66078" -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - to_port                = 80 -> null
+    }
+
+  # module.alb.aws_vpc_security_group_ingress_rule.http_in will be destroyed
+  - resource "aws_vpc_security_group_ingress_rule" "http_in" {
+      - arn                    = "arn:aws:ec2:us-east-1:123456789012:security-group-rule/sgr-05db554c66445505c" -> null
+      - cidr_ipv4              = "0.0.0.0/0" -> null
+      - from_port              = 80 -> null
+      - id                     = "sgr-05db554c66445505c" -> null
+      - ip_protocol            = "tcp" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-036a8f8f67388f897" -> null
+      - security_group_rule_id = "sgr-05db554c66445505c" -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - to_port                = 80 -> null
+    }
+
+  # module.alb.aws_wafv2_web_acl.this[0] will be destroyed
+  - resource "aws_wafv2_web_acl" "this" {
+      - arn                         = "arn:aws:wafv2:us-east-1:123456789012:regional/webacl/ha-webapp-dev-alb-waf/6e7d5243-e386-4de6-bd4c-2021a91a111f" -> null
+      - capacity                    = 700 -> null
+      - description                 = "WAF Web ACL for the ALB" -> null
+      - id                          = "6e7d5243-e386-4de6-bd4c-2021a91a111f" -> null
+      - lock_token                  = "f8c9be3d-819c-4a99-b383-adc6200e79f9" -> null
+      - name                        = "ha-webapp-dev-alb-waf" -> null
+      - region                      = "us-east-1" -> null
+      - scope                       = "REGIONAL" -> null
+      - tags                        = {
+          - "Name" = "ha-webapp_dev_alb_waf"
+        } -> null
+      - tags_all                    = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_alb_waf"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - token_domains               = [] -> null
+        # (2 unchanged attributes hidden)
+
+      - default_action {
+          - allow {
+            }
+        }
+
+      - rule {
+          - name     = "aws-common-rule-set" -> null
+          - priority = 1 -> null
+
+          - override_action {
+              - none {}
+            }
+
+          - statement {
+              - managed_rule_group_statement {
+                  - name        = "AWSManagedRulesCommonRuleSet" -> null
+                  - vendor_name = "AWS" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+
+          - visibility_config {
+              - cloudwatch_metrics_enabled = true -> null
+              - metric_name                = "ha-webapp-dev-alb-waf-common-rule-set" -> null
+              - sampled_requests_enabled   = true -> null
+            }
+        }
+
+      - visibility_config {
+          - cloudwatch_metrics_enabled = true -> null
+          - metric_name                = "ha-webapp-dev-alb-waf" -> null
+          - sampled_requests_enabled   = true -> null
+        }
+    }
+
+  # module.alb.aws_wafv2_web_acl_association.this[0] will be destroyed
+  - resource "aws_wafv2_web_acl_association" "this" {
+      - id           = "arn:aws:wafv2:us-east-1:123456789012:regional/webacl/ha-webapp-dev-alb-waf/6e7d5243-e386-4de6-bd4c-2021a91a111f,arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899" -> null
+      - region       = "us-east-1" -> null
+      - resource_arn = "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899" -> null
+      - web_acl_arn  = "arn:aws:wafv2:us-east-1:123456789012:regional/webacl/ha-webapp-dev-alb-waf/6e7d5243-e386-4de6-bd4c-2021a91a111f" -> null
+    }
+
+  # module.compute.aws_autoscaling_group.this will be destroyed
+  - resource "aws_autoscaling_group" "this" {
+      - arn                              = "arn:aws:autoscaling:us-east-1:123456789012:autoScalingGroup:cebc8e11-cf1c-4ab7-a2b5-5d7940333456:autoScalingGroupName/ha-webapp-dev-compute-asg" -> null
+      - availability_zones               = [
+          - "us-east-1a",
+          - "us-east-1b",
+        ] -> null
+      - capacity_rebalance               = false -> null
+      - default_cooldown                 = 300 -> null
+      - default_instance_warmup          = 0 -> null
+      - desired_capacity                 = 2 -> null
+      - enabled_metrics                  = [
+          - "GroupDesiredCapacity",
+          - "GroupInServiceInstances",
+        ] -> null
+      - force_delete                     = false -> null
+      - force_delete_warm_pool           = false -> null
+      - health_check_grace_period        = 300 -> null
+      - health_check_type                = "ELB" -> null
+      - id                               = "ha-webapp-dev-compute-asg" -> null
+      - ignore_failed_scaling_activities = false -> null
+      - load_balancers                   = [] -> null
+      - max_instance_lifetime            = 0 -> null
+      - max_size                         = 4 -> null
+      - metrics_granularity              = "1Minute" -> null
+      - min_size                         = 2 -> null
+      - name                             = "ha-webapp-dev-compute-asg" -> null
+      - predicted_capacity               = 0 -> null
+      - protect_from_scale_in            = false -> null
+      - region                           = "us-east-1" -> null
+      - service_linked_role_arn          = "arn:aws:iam::123456789012:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling" -> null
+      - suspended_processes              = [] -> null
+      - target_group_arns                = [
+          - "arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def",
+        ] -> null
+      - termination_policies             = [] -> null
+      - vpc_zone_identifier              = [
+          - "subnet-059f39ffba0a963f3",
+          - "subnet-061196c4cf8f6bc96",
+        ] -> null
+      - wait_for_capacity_timeout        = "10m" -> null
+      - warm_pool_size                   = 0 -> null
+        # (5 unchanged attributes hidden)
+
+      - availability_zone_distribution {
+          - capacity_distribution_strategy = "balanced-best-effort" -> null
+        }
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "default" -> null
+        }
+
+      - instance_lifecycle_policy {
+          - retention_triggers {
+              - terminate_hook_abandon = "terminate" -> null
+            }
+        }
+
+      - instance_refresh {
+          - strategy = "Rolling" -> null
+          - triggers = [] -> null
+
+          - preferences {
+              - auto_rollback                = false -> null
+              - checkpoint_percentages       = [] -> null
+              - max_healthy_percentage       = 100 -> null
+              - min_healthy_percentage       = 50 -> null
+              - scale_in_protected_instances = "Ignore" -> null
+              - skip_matching                = false -> null
+              - standby_instances            = "Ignore" -> null
+                # (2 unchanged attributes hidden)
+            }
+        }
+
+      - launch_template {
+          - id      = "lt-02dab84c5b77a02cc" -> null
+          - name    = "ha-webapp-dev-compute-lt" -> null
+          - version = "1" -> null
+        }
+
+      - tag {
+          - key                 = "Environment" -> null
+          - propagate_at_launch = true -> null
+          - value               = "dev" -> null
+        }
+      - tag {
+          - key                 = "ManagedBy" -> null
+          - propagate_at_launch = true -> null
+          - value               = "terraform" -> null
+        }
+      - tag {
+          - key                 = "Name" -> null
+          - propagate_at_launch = true -> null
+          - value               = "ha-webapp_dev_web" -> null
+        }
+      - tag {
+          - key                 = "Project" -> null
+          - propagate_at_launch = true -> null
+          - value               = "ha-webapp" -> null
+        }
+
+      - traffic_source {
+          - identifier = "arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def" -> null
+          - type       = "elbv2" -> null
+        }
+    }
+
+  # module.compute.aws_autoscaling_policy.this will be destroyed
+  - resource "aws_autoscaling_policy" "this" {
+      - arn                       = "arn:aws:autoscaling:us-east-1:123456789012:scalingPolicy:f3c7d31f-eeb9-4b37-85aa-0e8918284268:autoScalingGroupName/ha-webapp-dev-compute-asg:policyName/ha-webapp-dev-compute-scale-policy" -> null
+      - autoscaling_group_name    = "ha-webapp-dev-compute-asg" -> null
+      - cooldown                  = 0 -> null
+      - enabled                   = true -> null
+      - estimated_instance_warmup = 0 -> null
+      - id                        = "ha-webapp-dev-compute-scale-policy" -> null
+      - min_adjustment_magnitude  = 0 -> null
+      - name                      = "ha-webapp-dev-compute-scale-policy" -> null
+      - policy_type               = "TargetTrackingScaling" -> null
+      - region                    = "us-east-1" -> null
+      - scaling_adjustment        = 0 -> null
+        # (2 unchanged attributes hidden)
+
+      - target_tracking_configuration {
+          - disable_scale_in = false -> null
+          - target_value     = 50 -> null
+
+          - predefined_metric_specification {
+              - predefined_metric_type = "ASGAverageCPUUtilization" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # module.compute.aws_iam_instance_profile.this will be destroyed
+  - resource "aws_iam_instance_profile" "this" {
+      - arn         = "arn:aws:iam::123456789012:instance-profile/ha-webapp-dev-compute-instance-profile" -> null
+      - create_date = "2026-11-26T01:19:52Z" -> null
+      - id          = "ha-webapp-dev-compute-instance-profile" -> null
+      - name        = "ha-webapp-dev-compute-instance-profile" -> null
+      - path        = "/" -> null
+      - role        = "ha-webapp-dev-compute-role" -> null
+      - tags        = {} -> null
+      - tags_all    = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - unique_id   = "AIPATCKAPNUSX6MZEWFOM" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.compute.aws_iam_role.this will be destroyed
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::123456789012:role/ha-webapp-dev-compute-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-11-26T01:19:51Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "ha-webapp-dev-compute-role" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "ha-webapp-dev-compute-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - unique_id             = "AROATCKAPNUS6ULUL53P4" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # module.compute.aws_iam_role_policy_attachment.this will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "ha-webapp-dev-compute-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - role       = "ha-webapp-dev-compute-role" -> null
+    }
+
+  # module.compute.aws_launch_template.this will be destroyed
+  - resource "aws_launch_template" "this" {
+      - arn                                  = "arn:aws:ec2:us-east-1:123456789012:launch-template/lt-02dab84c5b77a02cc" -> null
+      - default_version                      = 1 -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - id                                   = "lt-02dab84c5b77a02cc" -> null
+      - image_id                             = "ami-062caee4b7b602eb0" -> null
+      - instance_type                        = "t3.micro" -> null
+      - latest_version                       = 1 -> null
+      - name                                 = "ha-webapp-dev-compute-lt" -> null
+      - region                               = "us-east-1" -> null
+      - security_group_names                 = [] -> null
+      - tags                                 = {
+          - "Name" = "ha-webapp_dev_compute_lt"
+        } -> null
+      - tags_all                             = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_compute_lt"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - user_data                            = "IyEvYmluL2Jhc2gKc2V0IC1FZXVvIHBpcGVmYWlsICMgRXhpdCBvbiBlcnJvciwgdW5zZXQgdmFyaWFibGUsIG9yIGZhaWxlZCBwaXBlIGNvbW1hbmQKCiMgSW5zdGFsbCBBcGFjaGUgc2VydmljZQpkbmYgaW5zdGFsbCAteSBodHRwZAoKIyBDb25maWd1cmUgQXBhY2hlIHVzZXIgYW5kIGdyb3VwIHBlcm1pc3Npb25zCnVzZXJtb2QgLWEgLUcgYXBhY2hlIGVjMi11c2VyCmNob3duIC1SIGVjMi11c2VyOmFwYWNoZSAvdmFyL3d3dwoKIyMgR2V0IGluc3RhbmNlIElEIGFuZCBBdmFpbGFiaWxpdHkgWm9uZQpJTURTPSJodHRwOi8vMTY5LjI1NC4xNjkuMjU0IgpUT0tFTj0kKGN1cmwgLS1mYWlsIC0tc2lsZW50IC0tc2hvdy1lcnJvciAtLWNvbm5lY3QtdGltZW91dCAyIC0tbWF4LXRpbWUgNSBcCiAgLVggUFVUICIkSU1EUy9sYXRlc3QvYXBpL3Rva2VuIiBcCiAgLUggIlgtYXdzLWVjMi1tZXRhZGF0YS10b2tlbi10dGwtc2Vjb25kczogMjE2MDAiKQoKbWV0YWRhdGEoKSB7CiAgY3VybCAtLWZhaWwgLS1zaWxlbnQgLS1zaG93LWVycm9yIC0tY29ubmVjdC10aW1lb3V0IDIgLS1tYXgtdGltZSA1IFwKICAgIC1IICJYLWF3cy1lYzItbWV0YWRhdGEtdG9rZW46ICRUT0tFTiIgXAogICAgIiRJTURTL2xhdGVzdC9tZXRhLWRhdGEvJDEiCn0KCklOU1RBTkNFX0lEPSQobWV0YWRhdGEgaW5zdGFuY2UtaWQpCkFWQUlMQUJJTElUWV9aT05FPSQobWV0YWRhdGEgcGxhY2VtZW50L2F2YWlsYWJpbGl0eS16b25lKQoKIyBDcmVhdGUgaW5kZXguaHRtbCB3aXRoIGluc3RhbmNlIElEIGFuZCBhdmFpbGFiaWxpdHkgem9uZQpjYXQgPiAvdmFyL3d3dy9odG1sL2luZGV4Lmh0bWwgPDwgRU9GCjwhRE9DVFlQRSBodG1sPgo8aHRtbD4KPGhlYWQ+CiAgICA8dGl0bGU+SW5zdGFuY2UgSW5mb3JtYXRpb248L3RpdGxlPgo8L2hlYWQ+Cjxib2R5PgogICAgPGgxPkluc3RhbmNlIElEOiAkSU5TVEFOQ0VfSUQ8L2gxPgogICAgPGgyPkF2YWlsYWJpbGl0eSBab25lOiAkQVZBSUxBQklMSVRZX1pPTkU8L2gyPgo8L2JvZHk+CjwvaHRtbD4KRU9GCgojIFN0YXJ0IGFuZCBFbmFibGUgQXBhY2hlIHNlcnZpY2UKc3lzdGVtY3RsIGVuYWJsZSAtLW5vdyBodHRwZAo=" -> null
+      - vpc_security_group_ids               = [
+          - "sg-02b744d5375b052df",
+        ] -> null
+        # (7 unchanged attributes hidden)
+
+      - block_device_mappings {
+          - device_name  = "/dev/xvda" -> null
+            # (2 unchanged attributes hidden)
+
+          - ebs {
+              - encrypted                  = "true" -> null
+              - iops                       = 0 -> null
+              - throughput                 = 0 -> null
+              - volume_initialization_rate = 0 -> null
+              - volume_size                = 20 -> null
+              - volume_type                = "gp3" -> null
+                # (3 unchanged attributes hidden)
+            }
+        }
+
+      - iam_instance_profile {
+          - name = "ha-webapp-dev-compute-instance-profile" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_put_response_hop_limit = 0 -> null
+          - http_tokens                 = "required" -> null
+            # (2 unchanged attributes hidden)
+        }
+
+      - monitoring {
+          - enabled = true -> null
+        }
+    }
+
+  # module.compute.aws_security_group.this will be destroyed
+  - resource "aws_security_group" "this" {
+      - arn                    = "arn:aws:ec2:us-east-1:123456789012:security-group/sg-02b744d5375b052df" -> null
+      - description            = "Security group for compute instances" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - id                     = "sg-02b744d5375b052df" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = []
+              - description      = "Allow HTTP from ALB security group"
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-036a8f8f67388f897",
+                ]
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "ha-webapp-dev-compute-sg" -> null
+      - owner_id               = "123456789012" -> null
+      - region                 = "us-east-1" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "ha-webapp_dev_compute_sg"
+        } -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_compute_sg"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                 = "vpc-088e67147fe9deb9d" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.compute.aws_vpc_security_group_egress_rule.all_out will be destroyed
+  - resource "aws_vpc_security_group_egress_rule" "all_out" {
+      - arn                    = "arn:aws:ec2:us-east-1:123456789012:security-group-rule/sgr-014607ebb5040e2a5" -> null
+      - cidr_ipv4              = "0.0.0.0/0" -> null
+      - from_port              = -1 -> null
+      - id                     = "sgr-014607ebb5040e2a5" -> null
+      - ip_protocol            = "-1" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-02b744d5375b052df" -> null
+      - security_group_rule_id = "sgr-014607ebb5040e2a5" -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - to_port                = -1 -> null
+    }
+
+  # module.compute.aws_vpc_security_group_ingress_rule.http_from_alb will be destroyed
+  - resource "aws_vpc_security_group_ingress_rule" "http_from_alb" {
+      - arn                          = "arn:aws:ec2:us-east-1:123456789012:security-group-rule/sgr-027c7036e9887be9c" -> null
+      - description                  = "Allow HTTP from ALB security group" -> null
+      - from_port                    = 80 -> null
+      - id                           = "sgr-027c7036e9887be9c" -> null
+      - ip_protocol                  = "tcp" -> null
+      - referenced_security_group_id = "sg-036a8f8f67388f897" -> null
+      - region                       = "us-east-1" -> null
+      - security_group_id            = "sg-02b744d5375b052df" -> null
+      - security_group_rule_id       = "sgr-027c7036e9887be9c" -> null
+      - tags_all                     = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - to_port                      = 80 -> null
+    }
+
+  # module.network.aws_internet_gateway.this will be destroyed
+  - resource "aws_internet_gateway" "this" {
+      - arn      = "arn:aws:ec2:us-east-1:123456789012:internet-gateway/igw-0aa20e2e38df674ca" -> null
+      - id       = "igw-0aa20e2e38df674ca" -> null
+      - owner_id = "123456789012" -> null
+      - region   = "us-east-1" -> null
+      - tags     = {
+          - "Name" = "ha-webapp_dev_igw"
+        } -> null
+      - tags_all = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_igw"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id   = "vpc-088e67147fe9deb9d" -> null
+    }
+
+  # module.network.aws_nat_gateway.this will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - auto_provision_zones           = "enabled" -> null
+      - auto_scaling_ips               = "enabled" -> null
+      - availability_mode              = "regional" -> null
+      - connectivity_type              = "public" -> null
+      - id                             = "nat-1f9e5176d7a0d39f9" -> null
+      - region                         = "us-east-1" -> null
+      - regional_nat_gateway_address   = [
+          - {
+              - allocation_id        = "eipalloc-0330e05bf4fecbd81"
+              - association_id       = "eipassoc-0d15883a25c52fb72"
+              - availability_zone    = "us-east-1a"
+              - availability_zone_id = "use1-az1"
+              - public_ip            = "52.45.198.23"
+              - status               = "succeeded"
+                # (1 unchanged attribute hidden)
+            },
+          - {
+              - allocation_id        = "eipalloc-0877d05536c66ed5b"
+              - association_id       = "eipassoc-03ce37441cfe0fa13"
+              - availability_zone    = "us-east-1b"
+              - availability_zone_id = "use1-az2"
+              - public_ip            = "32.195.15.35"
+              - status               = "succeeded"
+                # (1 unchanged attribute hidden)
+            },
+          - {
+              - allocation_id        = "eipalloc-0d033bce8c684aa96"
+              - association_id       = "eipassoc-05259e818f65c6ea4"
+              - availability_zone    = "us-east-1d"
+              - availability_zone_id = "use1-az6"
+              - public_ip            = "34.196.134.43"
+              - status               = "succeeded"
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - regional_nat_gateway_auto_mode = "enabled" -> null
+      - route_table_id                 = "rtb-035a531a503e42920" -> null
+      - secondary_allocation_ids       = [] -> null
+      - secondary_private_ip_addresses = [] -> null
+      - tags                           = {
+          - "Name" = "ha-webapp_dev_nat"
+        } -> null
+      - tags_all                       = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_nat"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                         = "vpc-088e67147fe9deb9d" -> null
+    }
+
+  # module.network.aws_route_table.private will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:us-east-1:123456789012:route-table/rtb-0fd4828d8d830c1ae" -> null
+      - id               = "rtb-0fd4828d8d830c1ae" -> null
+      - owner_id         = "123456789012" -> null
+      - propagating_vgws = [] -> null
+      - region           = "us-east-1" -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - nat_gateway_id             = "nat-1f9e5176d7a0d39f9"
+                # (12 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "ha-webapp_dev_private_rt"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_private_rt"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id           = "vpc-088e67147fe9deb9d" -> null
+    }
+
+  # module.network.aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-1:123456789012:route-table/rtb-033ec4239ca78656f" -> null
+      - id               = "rtb-033ec4239ca78656f" -> null
+      - owner_id         = "123456789012" -> null
+      - propagating_vgws = [] -> null
+      - region           = "us-east-1" -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0aa20e2e38df674ca"
+                # (12 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "ha-webapp_dev_public_rt"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_public_rt"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id           = "vpc-088e67147fe9deb9d" -> null
+    }
+
+  # module.network.aws_route_table_association.private["us-east-1a"] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-05345b8ce3f2b78b8" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-0fd4828d8d830c1ae" -> null
+      - subnet_id      = "subnet-061196c4cf8f6bc96" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.network.aws_route_table_association.private["us-east-1b"] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-072df298006e5cb12" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-0fd4828d8d830c1ae" -> null
+      - subnet_id      = "subnet-059f39ffba0a963f3" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.network.aws_route_table_association.public["us-east-1a"] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-07bcbb7ebfc5afd43" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-033ec4239ca78656f" -> null
+      - subnet_id      = "subnet-06bde853763442c08" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.network.aws_route_table_association.public["us-east-1b"] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0d76161c95712344a" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-033ec4239ca78656f" -> null
+      - subnet_id      = "subnet-04323afe875a3811b" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.network.aws_subnet.private["us-east-1a"] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-061196c4cf8f6bc96" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.69.129.128/27" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-061196c4cf8f6bc96" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "123456789012" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name" = "ha-webapp_dev_private_us-east-1a"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_private_us-east-1a"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                                         = "vpc-088e67147fe9deb9d" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.network.aws_subnet.private["us-east-1b"] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-059f39ffba0a963f3" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1b" -> null
+      - availability_zone_id                           = "use1-az2" -> null
+      - cidr_block                                     = "10.69.129.160/27" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-059f39ffba0a963f3" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "123456789012" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name" = "ha-webapp_dev_private_us-east-1b"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_private_us-east-1b"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                                         = "vpc-088e67147fe9deb9d" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.network.aws_subnet.public["us-east-1a"] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-06bde853763442c08" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.69.129.0/27" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-06bde853763442c08" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "123456789012" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name" = "ha-webapp_dev_public_us-east-1a"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_public_us-east-1a"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                                         = "vpc-088e67147fe9deb9d" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.network.aws_subnet.public["us-east-1b"] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-04323afe875a3811b" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1b" -> null
+      - availability_zone_id                           = "use1-az2" -> null
+      - cidr_block                                     = "10.69.129.32/27" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-04323afe875a3811b" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "123456789012" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name" = "ha-webapp_dev_public_us-east-1b"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_public_us-east-1b"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_id                                         = "vpc-088e67147fe9deb9d" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.network.aws_vpc.this will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:us-east-1:123456789012:vpc/vpc-088e67147fe9deb9d" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.69.129.0/24" -> null
+      - default_network_acl_id               = "acl-07d827f51a2305df7" -> null
+      - default_route_table_id               = "rtb-0b571e77b127c11a3" -> null
+      - default_security_group_id            = "sg-0743b597cb46e13df" -> null
+      - dhcp_options_id                      = "dopt-0a27d634e6b679f80" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-088e67147fe9deb9d" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-0b571e77b127c11a3" -> null
+      - owner_id                             = "123456789012" -> null
+      - region                               = "us-east-1" -> null
+      - tags                                 = {
+          - "Name" = "ha-webapp_dev"
+        } -> null
+      - tags_all                             = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev"
+          - "Project"     = "ha-webapp"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.network.aws_vpc_endpoint.s3 will be destroyed
+  - resource "aws_vpc_endpoint" "s3" {
+      - arn                        = "arn:aws:ec2:us-east-1:123456789012:vpc-endpoint/vpce-0c2d794561be891ee" -> null
+      - cidr_blocks                = [
+          - "16.182.0.0/16",
+          - "54.231.0.0/16",
+          - "3.5.0.0/19",
+          - "52.216.0.0/15",
+          - "16.15.156.0/22",
+          - "16.15.96.0/20",
+          - "16.15.160.0/19",
+          - "18.34.0.0/19",
+          - "16.15.64.0/19",
+          - "3.2.103.0/24",
+          - "18.34.232.0/21",
+          - "16.15.192.0/18",
+          - "16.15.112.0/21",
+          - "16.15.120.0/22",
+        ] -> null
+      - dns_entry                  = [] -> null
+      - id                         = "vpce-0c2d794561be891ee" -> null
+      - ip_address_type            = "ipv4" -> null
+      - network_interface_ids      = [] -> null
+      - owner_id                   = "123456789012" -> null
+      - policy                     = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "*"
+                      - Effect    = "Allow"
+                      - Principal = "*"
+                      - Resource  = "*"
+                    },
+                ]
+              - Version   = "2008-10-17"
+            }
+        ) -> null
+      - prefix_list_id             = "pl-63a5400a" -> null
+      - private_dns_enabled        = false -> null
+      - region                     = "us-east-1" -> null
+      - requester_managed          = false -> null
+      - route_table_ids            = [
+          - "rtb-0fd4828d8d830c1ae",
+        ] -> null
+      - security_group_ids         = [] -> null
+      - service_name               = "com.amazonaws.us-east-1.s3" -> null
+      - service_region             = "us-east-1" -> null
+      - state                      = "available" -> null
+      - subnet_ids                 = [] -> null
+      - tags                       = {
+          - "Name" = "ha-webapp_dev_s3_gw_endpoint"
+        } -> null
+      - tags_all                   = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_s3_gw_endpoint"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - vpc_endpoint_type          = "Gateway" -> null
+      - vpc_id                     = "vpc-088e67147fe9deb9d" -> null
+        # (2 unchanged attributes hidden)
+
+      - dns_options {
+          - dns_record_ip_type                             = "service-defined" -> null
+          - private_dns_only_for_inbound_resolver_endpoint = false -> null
+          - private_dns_specified_domains                  = [] -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # module.network.aws_vpc_endpoint_route_table_association.s3_private will be destroyed
+  - resource "aws_vpc_endpoint_route_table_association" "s3_private" {
+      - id              = "a-vpce-0c2d794561be891ee1328491333" -> null
+      - region          = "us-east-1" -> null
+      - route_table_id  = "rtb-0fd4828d8d830c1ae" -> null
+      - vpc_endpoint_id = "vpce-0c2d794561be891ee" -> null
+    }
+
+  # module.observability.aws_cloudwatch_dashboard.this will be destroyed
+  - resource "aws_cloudwatch_dashboard" "this" {
+      - dashboard_arn  = "arn:aws:cloudwatch::123456789012:dashboard/ha-webapp-dev-observability-dashboard" -> null
+      - dashboard_body = jsonencode(
+            {
+              - widgets = [
+                  - {
+                      - height     = 6
+                      - properties = {
+                          - alarms = [
+                              - "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-unhealthy-alb-targets-alarm",
+                              - "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-low-healthy-alb-targets-alarm",
+                              - "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-alb-5xx-errors-alarm",
+                              - "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-target-5xx-errors-alarm",
+                              - "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-external-availability-alarm",
+                              - "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-high-cpu-alarm",
+                            ]
+                          - title  = "Application alarms"
+                        }
+                      - type       = "alarm"
+                      - width      = 24
+                      - x          = 0
+                      - y          = 0
+                    },
+                  - {
+                      - height     = 6
+                      - properties = {
+                          - metrics = [
+                              - [
+                                  - "AWS/ApplicationELB",
+                                  - "RequestCount",
+                                  - "LoadBalancer",
+                                  - "app/ha-webapp-dev-alb/5ec13aba97d15899",
+                                  - {
+                                      - label = "Requests"
+                                      - stat  = "Sum"
+                                    },
+                                ],
+                            ]
+                          - period  = 60
+                          - region  = "us-east-1"
+                          - stacked = false
+                          - title   = "ALB requests"
+                          - view    = "timeSeries"
+                        }
+                      - type       = "metric"
+                      - width      = 12
+                      - x          = 0
+                      - y          = 6
+                    },
+                  - {
+                      - height     = 6
+                      - properties = {
+                          - metrics = [
+                              - [
+                                  - "AWS/ApplicationELB",
+                                  - "HealthyHostCount",
+                                  - "LoadBalancer",
+                                  - "app/ha-webapp-dev-alb/5ec13aba97d15899",
+                                  - "TargetGroup",
+                                  - "targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def",
+                                  - {
+                                      - label = "Healthy targets"
+                                      - stat  = "Minimum"
+                                    },
+                                ],
+                            ]
+                          - period  = 60
+                          - region  = "us-east-1"
+                          - stacked = false
+                          - title   = "Healthy ALB targets"
+                          - view    = "timeSeries"
+                        }
+                      - type       = "metric"
+                      - width      = 12
+                      - x          = 12
+                      - y          = 6
+                    },
+                  - {
+                      - height     = 6
+                      - properties = {
+                          - metrics = [
+                              - [
+                                  - "AWS/AutoScaling",
+                                  - "GroupDesiredCapacity",
+                                  - "AutoScalingGroupName",
+                                  - "ha-webapp-dev-compute-asg",
+                                  - {
+                                      - label = "Desired"
+                                      - stat  = "Average"
+                                    },
+                                ],
+                              - [
+                                  - "AWS/AutoScaling",
+                                  - "GroupInServiceInstances",
+                                  - "AutoScalingGroupName",
+                                  - "ha-webapp-dev-compute-asg",
+                                  - {
+                                      - label = "In service"
+                                      - stat  = "Average"
+                                    },
+                                ],
+                            ]
+                          - period  = 60
+                          - region  = "us-east-1"
+                          - stacked = false
+                          - title   = "ASG desired and in-service capacity"
+                          - view    = "timeSeries"
+                        }
+                      - type       = "metric"
+                      - width      = 12
+                      - x          = 0
+                      - y          = 12
+                    },
+                ]
+            }
+        ) -> null
+      - dashboard_name = "ha-webapp-dev-observability-dashboard" -> null
+      - id             = "ha-webapp-dev-observability-dashboard" -> null
+      - region         = "us-east-1" -> null
+    }
+
+  # module.observability.aws_cloudwatch_metric_alarm.alb_5xx_errors will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "alb_5xx_errors" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - alarm_description                     = "Alarm for ALB 5XX errors" -> null
+      - alarm_name                            = "ha-webapp-dev-alb-5xx-errors-alarm" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-alb-5xx-errors-alarm" -> null
+      - comparison_operator                   = "GreaterThanThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "LoadBalancer" = "app/ha-webapp-dev-alb/5ec13aba97d15899"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 2 -> null
+      - id                                    = "ha-webapp-dev-alb-5xx-errors-alarm" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "HTTPCode_ELB_5XX_Count" -> null
+      - namespace                             = "AWS/ApplicationELB" -> null
+      - ok_actions                            = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Sum" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - threshold                             = 10 -> null
+      - treat_missing_data                    = "notBreaching" -> null
+      - unit                                  = "Count" -> null
+        # (3 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_cloudwatch_metric_alarm.alb_targets will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "alb_targets" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - alarm_description                     = "Alarm for unhealthy ALB targets" -> null
+      - alarm_name                            = "ha-webapp-dev-unhealthy-alb-targets-alarm" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-unhealthy-alb-targets-alarm" -> null
+      - comparison_operator                   = "GreaterThanOrEqualToThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "LoadBalancer" = "app/ha-webapp-dev-alb/5ec13aba97d15899"
+          - "TargetGroup"  = "targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 2 -> null
+      - id                                    = "ha-webapp-dev-unhealthy-alb-targets-alarm" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "UnhealthyHostCount" -> null
+      - namespace                             = "AWS/ApplicationELB" -> null
+      - ok_actions                            = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Maximum" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - threshold                             = 1 -> null
+      - treat_missing_data                    = "notBreaching" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_cloudwatch_metric_alarm.external_availability will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "external_availability" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - alarm_description                     = "Alarm when the public ALB health check fails or stops reporting" -> null
+      - alarm_name                            = "ha-webapp-dev-external-availability-alarm" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-external-availability-alarm" -> null
+      - comparison_operator                   = "LessThanThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "HealthCheckId" = "4da21572-5155-5102-0745-520128ede921"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 2 -> null
+      - id                                    = "ha-webapp-dev-external-availability-alarm" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "HealthCheckStatus" -> null
+      - namespace                             = "AWS/Route53" -> null
+      - ok_actions                            = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Minimum" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - threshold                             = 1 -> null
+      - treat_missing_data                    = "breaching" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_cloudwatch_metric_alarm.high_cpu will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "high_cpu" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - alarm_description                     = "Alarm for high CPU utilization - ASG scaling issues" -> null
+      - alarm_name                            = "ha-webapp-dev-high-cpu-alarm" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-high-cpu-alarm" -> null
+      - comparison_operator                   = "GreaterThanThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "AutoScalingGroupName" = "ha-webapp-dev-compute-asg"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 2 -> null
+      - id                                    = "ha-webapp-dev-high-cpu-alarm" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "CPUUtilization" -> null
+      - namespace                             = "AWS/EC2" -> null
+      - ok_actions                            = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Average" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - threshold                             = 80 -> null
+      - treat_missing_data                    = "missing" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_cloudwatch_metric_alarm.low_healthy_targets will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "low_healthy_targets" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - alarm_description                     = "Alarm when healthy ALB targets fall below the ASG minimum" -> null
+      - alarm_name                            = "ha-webapp-dev-low-healthy-alb-targets-alarm" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-low-healthy-alb-targets-alarm" -> null
+      - comparison_operator                   = "LessThanThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "LoadBalancer" = "app/ha-webapp-dev-alb/5ec13aba97d15899"
+          - "TargetGroup"  = "targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 2 -> null
+      - id                                    = "ha-webapp-dev-low-healthy-alb-targets-alarm" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "HealthyHostCount" -> null
+      - namespace                             = "AWS/ApplicationELB" -> null
+      - ok_actions                            = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Minimum" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - threshold                             = 2 -> null
+      - treat_missing_data                    = "breaching" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_cloudwatch_metric_alarm.target_5xx_errors will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "target_5xx_errors" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - alarm_description                     = "Alarm when an application target returns a 5XX response" -> null
+      - alarm_name                            = "ha-webapp-dev-target-5xx-errors-alarm" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:123456789012:alarm:ha-webapp-dev-target-5xx-errors-alarm" -> null
+      - comparison_operator                   = "GreaterThanOrEqualToThreshold" -> null
+      - datapoints_to_alarm                   = 0 -> null
+      - dimensions                            = {
+          - "LoadBalancer" = "app/ha-webapp-dev-alb/5ec13aba97d15899"
+          - "TargetGroup"  = "targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 1 -> null
+      - id                                    = "ha-webapp-dev-target-5xx-errors-alarm" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "HTTPCode_Target_5XX_Count" -> null
+      - namespace                             = "AWS/ApplicationELB" -> null
+      - ok_actions                            = [
+          - "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic",
+        ] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Sum" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - threshold                             = 1 -> null
+      - treat_missing_data                    = "notBreaching" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_flow_log.vpc will be destroyed
+  - resource "aws_flow_log" "vpc" {
+      - arn                        = "arn:aws:ec2:us-east-1:123456789012:vpc-flow-log/fl-0cf480dfa1c7b93d6" -> null
+      - id                         = "fl-0cf480dfa1c7b93d6" -> null
+      - log_destination            = "arn:aws:s3:::ha-webapp-dev-123456789012-flowlogs" -> null
+      - log_destination_type       = "s3" -> null
+      - log_format                 = "${version} ${account-id} ${interface-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${packets} ${bytes} ${start} ${end} ${action} ${log-status}" -> null
+      - max_aggregation_interval   = 600 -> null
+      - region                     = "us-east-1" -> null
+      - tags                       = {} -> null
+      - tags_all                   = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - traffic_type               = "ALL" -> null
+      - vpc_id                     = "vpc-088e67147fe9deb9d" -> null
+        # (2 unchanged attributes hidden)
+
+      - destination_options {
+          - file_format                = "parquet" -> null
+          - hive_compatible_partitions = false -> null
+          - per_hour_partition         = true -> null
+        }
+    }
+
+  # module.observability.aws_route53_health_check.alb will be destroyed
+  - resource "aws_route53_health_check" "alb" {
+      - arn                             = "arn:aws:route53:::healthcheck/4da21572-5155-5102-0745-520128ede921" -> null
+      - child_health_threshold          = 0 -> null
+      - child_healthchecks              = [] -> null
+      - disabled                        = false -> null
+      - enable_sni                      = false -> null
+      - failure_threshold               = 3 -> null
+      - fqdn                            = "ha-webapp-dev-alb-1927104723.us-east-1.elb.amazonaws.com" -> null
+      - id                              = "4da21572-5155-5102-0745-520128ede921" -> null
+      - invert_healthcheck              = false -> null
+      - measure_latency                 = false -> null
+      - port                            = 80 -> null
+      - regions                         = [] -> null
+      - request_interval                = 30 -> null
+      - resource_path                   = "/" -> null
+      - tags                            = {
+          - "Name" = "ha-webapp_dev_alb_external_health"
+        } -> null
+      - tags_all                        = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_alb_external_health"
+          - "Project"     = "ha-webapp"
+        } -> null
+      - triggers                        = {} -> null
+      - type                            = "HTTP" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_s3_bucket.logs will be destroyed
+  - resource "aws_s3_bucket" "logs" {
+      - arn                         = "arn:aws:s3:::ha-webapp-dev-123456789012-flowlogs" -> null
+      - bucket                      = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - bucket_domain_name          = "ha-webapp-dev-123456789012-flowlogs.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "us-east-1" -> null
+      - bucket_regional_domain_name = "ha-webapp-dev-123456789012-flowlogs.s3.us-east-1.amazonaws.com" -> null
+      - force_destroy               = true -> null
+      - hosted_zone_id              = "Z3AQBSTGFYJSTF" -> null
+      - id                          = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - object_lock_enabled         = false -> null
+      - policy                      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:PutObject"
+                      - Condition = {
+                          - ArnLike      = {
+                              - "aws:SourceArn" = "arn:aws:logs:us-east-1:123456789012:*"
+                            }
+                          - StringEquals = {
+                              - "aws:SourceAccount" = "123456789012"
+                              - "s3:x-amz-acl"      = "bucket-owner-full-control"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "delivery.logs.amazonaws.com"
+                        }
+                      - Resource  = "arn:aws:s3:::ha-webapp-dev-123456789012-flowlogs/*"
+                      - Sid       = "AWSLogDeliveryWrite"
+                    },
+                  - {
+                      - Action    = "s3:GetBucketAcl"
+                      - Condition = {
+                          - ArnLike      = {
+                              - "aws:SourceArn" = "arn:aws:logs:us-east-1:123456789012:*"
+                            }
+                          - StringEquals = {
+                              - "aws:SourceAccount" = "123456789012"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "delivery.logs.amazonaws.com"
+                        }
+                      - Resource  = "arn:aws:s3:::ha-webapp-dev-123456789012-flowlogs"
+                      - Sid       = "AWSLogDeliveryAclCheck"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region                      = "us-east-1" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {
+          - "Name" = "ha-webapp_dev_flowlogs_bucket"
+        } -> null
+      - tags_all                    = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_flowlogs_bucket"
+          - "Project"     = "ha-webapp"
+        } -> null
+        # (2 unchanged attributes hidden)
+
+      - grant {
+          - id          = "44116eeac6f31ee5e84cf4737ef49653f2b86af844ab336fce14e50f4f8d3719" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - lifecycle_rule {
+          - abort_incomplete_multipart_upload_days = 0 -> null
+          - enabled                                = true -> null
+          - id                                     = "vpc-flow-logs" -> null
+          - tags                                   = {} -> null
+            # (1 unchanged attribute hidden)
+
+          - expiration {
+              - days                         = 365 -> null
+              - expired_object_delete_marker = false -> null
+                # (1 unchanged attribute hidden)
+            }
+
+          - transition {
+              - days          = 30 -> null
+              - storage_class = "STANDARD_IA" -> null
+                # (1 unchanged attribute hidden)
+            }
+          - transition {
+              - days          = 90 -> null
+              - storage_class = "GLACIER" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # module.observability.aws_s3_bucket_lifecycle_configuration.logs will be destroyed
+  - resource "aws_s3_bucket_lifecycle_configuration" "logs" {
+      - bucket                                 = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - id                                     = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - region                                 = "us-east-1" -> null
+      - transition_default_minimum_object_size = "all_storage_classes_128K" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - id     = "vpc-flow-logs" -> null
+          - status = "Enabled" -> null
+            # (1 unchanged attribute hidden)
+
+          - expiration {
+              - days                         = 365 -> null
+              - expired_object_delete_marker = false -> null
+            }
+
+          - filter {
+                # (1 unchanged attribute hidden)
+            }
+
+          - transition {
+              - days          = 30 -> null
+              - storage_class = "STANDARD_IA" -> null
+            }
+          - transition {
+              - days          = 90 -> null
+              - storage_class = "GLACIER" -> null
+            }
+        }
+    }
+
+  # module.observability.aws_s3_bucket_policy.vpc_flow_logs will be destroyed
+  - resource "aws_s3_bucket_policy" "vpc_flow_logs" {
+      - bucket = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - id     = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - policy = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:PutObject"
+                      - Condition = {
+                          - ArnLike      = {
+                              - "aws:SourceArn" = "arn:aws:logs:us-east-1:123456789012:*"
+                            }
+                          - StringEquals = {
+                              - "aws:SourceAccount" = "123456789012"
+                              - "s3:x-amz-acl"      = "bucket-owner-full-control"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "delivery.logs.amazonaws.com"
+                        }
+                      - Resource  = "arn:aws:s3:::ha-webapp-dev-123456789012-flowlogs/*"
+                      - Sid       = "AWSLogDeliveryWrite"
+                    },
+                  - {
+                      - Action    = "s3:GetBucketAcl"
+                      - Condition = {
+                          - ArnLike      = {
+                              - "aws:SourceArn" = "arn:aws:logs:us-east-1:123456789012:*"
+                            }
+                          - StringEquals = {
+                              - "aws:SourceAccount" = "123456789012"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "delivery.logs.amazonaws.com"
+                        }
+                      - Resource  = "arn:aws:s3:::ha-webapp-dev-123456789012-flowlogs"
+                      - Sid       = "AWSLogDeliveryAclCheck"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region = "us-east-1" -> null
+    }
+
+  # module.observability.aws_s3_bucket_public_access_block.logs will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "logs" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - id                      = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "us-east-1" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # module.observability.aws_s3_bucket_server_side_encryption_configuration.logs will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "logs" {
+      - bucket                = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - id                    = "ha-webapp-dev-123456789012-flowlogs" -> null
+      - region                = "us-east-1" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # module.observability.aws_sns_topic.this will be destroyed
+  - resource "aws_sns_topic" "this" {
+      - application_success_feedback_sample_rate = 0 -> null
+      - arn                                      = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic" -> null
+      - content_based_deduplication              = false -> null
+      - fifo_topic                               = false -> null
+      - firehose_success_feedback_sample_rate    = 0 -> null
+      - http_success_feedback_sample_rate        = 0 -> null
+      - id                                       = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic" -> null
+      - lambda_success_feedback_sample_rate      = 0 -> null
+      - maximum_message_size                     = 0 -> null
+      - name                                     = "ha-webapp-dev-observability-topic" -> null
+      - owner                                    = "123456789012" -> null
+      - policy                                   = jsonencode(
+            {
+              - Id        = "__default_policy_ID"
+              - Statement = [
+                  - {
+                      - Action    = [
+                          - "SNS:GetTopicAttributes",
+                          - "SNS:SetTopicAttributes",
+                          - "SNS:AddPermission",
+                          - "SNS:RemovePermission",
+                          - "SNS:DeleteTopic",
+                          - "SNS:Subscribe",
+                          - "SNS:ListSubscriptionsByTopic",
+                          - "SNS:Publish",
+                        ]
+                      - Condition = {
+                          - StringEquals = {
+                              - "AWS:SourceOwner" = "123456789012"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - AWS = "*"
+                        }
+                      - Resource  = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic"
+                      - Sid       = "__default_statement_ID"
+                    },
+                ]
+              - Version   = "2008-10-17"
+            }
+        ) -> null
+      - region                                   = "us-east-1" -> null
+      - signature_version                        = 0 -> null
+      - sqs_success_feedback_sample_rate         = 0 -> null
+      - tags                                     = {
+          - "Name" = "ha-webapp_dev_observability_topic"
+        } -> null
+      - tags_all                                 = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "ha-webapp_dev_observability_topic"
+          - "Project"     = "ha-webapp"
+        } -> null
+        # (18 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_sns_topic_subscription.this["john.doe@example.com"] will be destroyed
+  - resource "aws_sns_topic_subscription" "this" {
+      - arn                             = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:0dc52387-069c-4365-941c-d81365a6a2b8" -> null
+      - confirmation_timeout_in_minutes = 1 -> null
+      - confirmation_was_authenticated  = false -> null
+      - endpoint                        = "john.doe@example.com" -> null
+      - endpoint_auto_confirms          = false -> null
+      - id                              = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:0dc52387-069c-4365-941c-d81365a6a2b8" -> null
+      - owner_id                        = "123456789012" -> null
+      - pending_confirmation            = false -> null
+      - protocol                        = "email" -> null
+      - raw_message_delivery            = false -> null
+      - region                          = "us-east-1" -> null
+      - topic_arn                       = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic" -> null
+        # (6 unchanged attributes hidden)
+    }
+
+  # module.observability.aws_sns_topic_subscription.this["jane.doe@example.com"] will be destroyed
+  - resource "aws_sns_topic_subscription" "this" {
+      - arn                             = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:c814afbb-90f8-469c-88d1-7edc6ceef04a" -> null
+      - confirmation_timeout_in_minutes = 1 -> null
+      - confirmation_was_authenticated  = false -> null
+      - endpoint                        = "jane.doe@example.com" -> null
+      - endpoint_auto_confirms          = false -> null
+      - id                              = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:c814afbb-90f8-469c-88d1-7edc6ceef04a" -> null
+      - owner_id                        = "123456789012" -> null
+      - pending_confirmation            = true -> null
+      - protocol                        = "email" -> null
+      - raw_message_delivery            = false -> null
+      - region                          = "us-east-1" -> null
+      - topic_arn                       = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic" -> null
+        # (6 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 54 to destroy.
+
+Changes to Outputs:
+  - alb_info              = {
+      - alb_access_logs_bucket_arn  = "arn:aws:s3:::ha-webapp-dev-123456789012-alb-access-logs"
+      - alb_arn                     = "arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899"
+      - alb_arn_suffix              = "app/ha-webapp-dev-alb/5ec13aba97d15899"
+      - alb_dns_name                = "ha-webapp-dev-alb-1927104723.us-east-1.elb.amazonaws.com"
+      - alb_security_group_id       = "sg-036a8f8f67388f897"
+      - alb_target_group_arn        = "arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def"
+      - alb_target_group_arn_suffix = "targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def"
+      - alb_waf_arn                 = "arn:aws:wafv2:us-east-1:123456789012:regional/webacl/ha-webapp-dev-alb-waf/6e7d5243-e386-4de6-bd4c-2021a91a111f"
+    } -> null
+  - compute_info          = {
+      - asg_min_size         = 2
+      - asg_name             = "ha-webapp-dev-compute-asg"
+      - iam_instance_profile = "ha-webapp-dev-compute-instance-profile"
+      - iam_role             = "ha-webapp-dev-compute-role"
+      - launch_template_id   = "lt-02dab84c5b77a02cc"
+      - security_group_id    = "sg-02b744d5375b052df"
+    } -> null
+  - deployment_input_info = {
+      - asg_max_size   = 4
+      - asg_min_size   = 2
+      - azs            = [
+          - "us-east-1a",
+          - "us-east-1b",
+        ]
+      - enable_waf     = true
+      - environment    = "dev"
+      - instance_type  = "t3.micro"
+      - project        = "ha-webapp"
+      - region         = "us-east-1"
+      - vpc_cidr_block = "10.69.129.0/24"
+    } -> null
+  - observability_info    = {
+      - cloudwatch_dashboard_name = "ha-webapp-dev-observability-dashboard"
+      - cloudwatch_dashboard_url  = "https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=ha-webapp-dev-observability-dashboard"
+      - sns_topic_arn             = "arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic"
+      - vpc_flow_log_id           = "fl-0cf480dfa1c7b93d6"
+      - vpc_flow_logs_bucket_arn  = "arn:aws:s3:::ha-webapp-dev-123456789012-flowlogs"
+    } -> null
+  - private_subnets_info  = {
+      - us-east-1a = {
+          - arn        = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-061196c4cf8f6bc96"
+          - az         = "us-east-1a"
+          - cidr_block = "10.69.129.128/27"
+          - id         = "subnet-061196c4cf8f6bc96"
+        }
+      - us-east-1b = {
+          - arn        = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-059f39ffba0a963f3"
+          - az         = "us-east-1b"
+          - cidr_block = "10.69.129.160/27"
+          - id         = "subnet-059f39ffba0a963f3"
+        }
+    } -> null
+  - public_subnets_info   = {
+      - us-east-1a = {
+          - arn        = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-06bde853763442c08"
+          - az         = "us-east-1a"
+          - cidr_block = "10.69.129.0/27"
+          - id         = "subnet-06bde853763442c08"
+        }
+      - us-east-1b = {
+          - arn        = "arn:aws:ec2:us-east-1:123456789012:subnet/subnet-04323afe875a3811b"
+          - az         = "us-east-1b"
+          - cidr_block = "10.69.129.32/27"
+          - id         = "subnet-04323afe875a3811b"
+        }
+    } -> null
+  - vpc_info              = {
+      - arn        = "arn:aws:ec2:us-east-1:123456789012:vpc/vpc-088e67147fe9deb9d"
+      - cidr_block = "10.69.129.0/24"
+      - id         = "vpc-088e67147fe9deb9d"
+      - region     = "us-east-1"
+    } -> null
+module.network.aws_route_table_association.private["us-east-1a"]: Destroying... [id=rtbassoc-05345b8ce3f2b78b8]
+module.compute.aws_iam_role_policy_attachment.this: Destroying... [id=ha-webapp-dev-compute-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+module.network.aws_route_table_association.public["us-east-1a"]: Destroying... [id=rtbassoc-07bcbb7ebfc5afd43]
+module.alb.aws_vpc_security_group_ingress_rule.http_in: Destroying... [id=sgr-05db554c66445505c]
+module.observability.aws_sns_topic_subscription.this["jane.doe@example.com"]: Destroying... [id=arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:c814afbb-90f8-469c-88d1-7edc6ceef04a]
+module.alb.aws_s3_bucket_server_side_encryption_configuration.logs: Destroying... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.alb.aws_vpc_security_group_egress_rule.http_to_vpc: Destroying... [id=sgr-06888b58ad6e66078]
+module.compute.aws_vpc_security_group_ingress_rule.http_from_alb: Destroying... [id=sgr-027c7036e9887be9c]
+module.observability.aws_sns_topic_subscription.this["john.doe@example.com"]: Destroying... [id=arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic:0dc52387-069c-4365-941c-d81365a6a2b8]
+module.alb.aws_s3_bucket_lifecycle_configuration.logs: Destroying... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.observability.aws_sns_topic_subscription.this["jane.doe@example.com"]: Destruction complete after 0s
+module.compute.aws_vpc_security_group_egress_rule.all_out: Destroying... [id=sgr-014607ebb5040e2a5]
+module.compute.aws_iam_role_policy_attachment.this: Destruction complete after 0s
+module.compute.aws_autoscaling_policy.this: Destroying... [id=ha-webapp-dev-compute-scale-policy]
+module.observability.aws_sns_topic_subscription.this["john.doe@example.com"]: Destruction complete after 1s
+module.observability.aws_s3_bucket_public_access_block.logs: Destroying... [id=ha-webapp-dev-123456789012-flowlogs]
+module.alb.aws_s3_bucket_lifecycle_configuration.logs: Destruction complete after 1s
+module.alb.aws_lb_listener.this: Destroying... [id=arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/ha-webapp-dev-alb/5ec13aba97d15899/fe5f7f9ffc2c20ae]
+module.alb.aws_s3_bucket_server_side_encryption_configuration.logs: Destruction complete after 1s
+module.network.aws_route_table_association.private["us-east-1b"]: Destroying... [id=rtbassoc-072df298006e5cb12]
+module.compute.aws_vpc_security_group_ingress_rule.http_from_alb: Destruction complete after 1s
+module.observability.aws_flow_log.vpc: Destroying... [id=fl-0cf480dfa1c7b93d6]
+module.alb.aws_vpc_security_group_ingress_rule.http_in: Destruction complete after 1s
+module.network.aws_route_table_association.public["us-east-1b"]: Destroying... [id=rtbassoc-0d76161c95712344a]
+module.network.aws_route_table_association.private["us-east-1a"]: Destruction complete after 1s
+module.network.aws_vpc_endpoint_route_table_association.s3_private: Destroying... [id=a-vpce-0c2d794561be891ee1328491333]
+module.alb.aws_vpc_security_group_egress_rule.http_to_vpc: Destruction complete after 1s
+module.observability.aws_cloudwatch_dashboard.this: Destroying... [id=ha-webapp-dev-observability-dashboard]
+module.network.aws_route_table_association.public["us-east-1a"]: Destruction complete after 1s
+module.observability.aws_s3_bucket_lifecycle_configuration.logs: Destroying... [id=ha-webapp-dev-123456789012-flowlogs]
+module.compute.aws_vpc_security_group_egress_rule.all_out: Destruction complete after 1s
+module.alb.aws_wafv2_web_acl_association.this[0]: Destroying... [id=arn:aws:wafv2:us-east-1:123456789012:regional/webacl/ha-webapp-dev-alb-waf/6e7d5243-e386-4de6-bd4c-2021a91a111f,arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899]
+module.observability.aws_flow_log.vpc: Destruction complete after 0s
+module.observability.aws_s3_bucket_server_side_encryption_configuration.logs: Destroying... [id=ha-webapp-dev-123456789012-flowlogs]
+module.alb.aws_lb_listener.this: Destruction complete after 0s
+module.alb.aws_s3_bucket_public_access_block.logs: Destroying... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.network.aws_route_table_association.private["us-east-1b"]: Destruction complete after 0s
+module.observability.aws_s3_bucket_policy.vpc_flow_logs: Destroying... [id=ha-webapp-dev-123456789012-flowlogs]
+module.observability.aws_s3_bucket_public_access_block.logs: Destruction complete after 0s
+module.network.aws_route_table_association.public["us-east-1b"]: Destruction complete after 0s
+module.network.aws_route_table.public: Destroying... [id=rtb-033ec4239ca78656f]
+module.observability.aws_cloudwatch_dashboard.this: Destruction complete after 0s
+module.observability.aws_cloudwatch_metric_alarm.external_availability: Destroying... [id=ha-webapp-dev-external-availability-alarm]
+module.observability.aws_cloudwatch_metric_alarm.target_5xx_errors: Destroying... [id=ha-webapp-dev-target-5xx-errors-alarm]
+module.compute.aws_autoscaling_policy.this: Destruction complete after 1s
+module.observability.aws_cloudwatch_metric_alarm.high_cpu: Destroying... [id=ha-webapp-dev-high-cpu-alarm]
+module.observability.aws_s3_bucket_lifecycle_configuration.logs: Destruction complete after 0s
+module.observability.aws_cloudwatch_metric_alarm.alb_targets: Destroying... [id=ha-webapp-dev-unhealthy-alb-targets-alarm]
+module.alb.aws_s3_bucket_public_access_block.logs: Destruction complete after 0s
+module.observability.aws_cloudwatch_metric_alarm.low_healthy_targets: Destroying... [id=ha-webapp-dev-low-healthy-alb-targets-alarm]
+module.observability.aws_s3_bucket_server_side_encryption_configuration.logs: Destruction complete after 0s
+module.observability.aws_cloudwatch_metric_alarm.alb_5xx_errors: Destroying... [id=ha-webapp-dev-alb-5xx-errors-alarm]
+module.observability.aws_cloudwatch_metric_alarm.target_5xx_errors: Destruction complete after 0s
+module.network.aws_vpc_endpoint_route_table_association.s3_private: Destruction complete after 0s
+module.network.aws_route_table.private: Destroying... [id=rtb-0fd4828d8d830c1ae]
+module.network.aws_vpc_endpoint.s3: Destroying... [id=vpce-0c2d794561be891ee]
+module.observability.aws_cloudwatch_metric_alarm.external_availability: Destruction complete after 1s
+module.observability.aws_route53_health_check.alb: Destroying... [id=4da21572-5155-5102-0745-520128ede921]
+module.observability.aws_s3_bucket_policy.vpc_flow_logs: Destruction complete after 1s
+module.observability.aws_s3_bucket.logs: Destroying... [id=ha-webapp-dev-123456789012-flowlogs]
+module.observability.aws_cloudwatch_metric_alarm.high_cpu: Destruction complete after 1s
+module.observability.aws_cloudwatch_metric_alarm.alb_targets: Destruction complete after 1s
+module.observability.aws_cloudwatch_metric_alarm.low_healthy_targets: Destruction complete after 1s
+module.observability.aws_cloudwatch_metric_alarm.alb_5xx_errors: Destruction complete after 1s
+module.observability.aws_sns_topic.this: Destroying... [id=arn:aws:sns:us-east-1:123456789012:ha-webapp-dev-observability-topic]
+module.compute.aws_autoscaling_group.this: Destroying... [id=ha-webapp-dev-compute-asg]
+module.observability.aws_sns_topic.this: Destruction complete after 0s
+module.network.aws_route_table.public: Destruction complete after 1s
+module.network.aws_route_table.private: Destruction complete after 1s
+module.network.aws_nat_gateway.this: Destroying... [id=nat-1f9e5176d7a0d39f9]
+module.alb.aws_wafv2_web_acl_association.this[0]: Destruction complete after 1s
+module.observability.aws_route53_health_check.alb: Destruction complete after 1s
+module.alb.aws_lb.this: Destroying... [id=arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/app/ha-webapp-dev-alb/5ec13aba97d15899]
+module.observability.aws_s3_bucket.logs: Destruction complete after 1s
+module.alb.aws_wafv2_web_acl.this[0]: Destroying... [id=6e7d5243-e386-4de6-bd4c-2021a91a111f]
+module.alb.aws_wafv2_web_acl.this[0]: Destruction complete after 1s
+module.network.aws_vpc_endpoint.s3: Still destroying... [id=vpce-0c2d794561be891ee, 00m10s elapsed]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 00m10s elapsed]
+module.network.aws_vpc_endpoint.s3: Destruction complete after 11s
+module.network.aws_nat_gateway.this: Still destroying... [id=nat-1f9e5176d7a0d39f9, 00m10s elapsed]
+module.alb.aws_lb.this: Still destroying... [id=arn:aws:elasticloadbalancing:us-east-1:...app/ha-webapp-dev-alb/5ec13aba97d15899, 00m10s elapsed]
+module.alb.aws_lb.this: Destruction complete after 17s
+module.alb.aws_s3_bucket_policy.alb_access_logs: Destroying... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.alb.aws_security_group.this: Destroying... [id=sg-036a8f8f67388f897]
+module.alb.aws_s3_bucket_policy.alb_access_logs: Destruction complete after 0s
+module.alb.aws_security_group.this: Destruction complete after 1s
+module.alb.aws_s3_bucket.logs: Destroying... [id=ha-webapp-dev-123456789012-alb-access-logs]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 00m20s elapsed]
+module.network.aws_nat_gateway.this: Still destroying... [id=nat-1f9e5176d7a0d39f9, 00m20s elapsed]
+module.alb.aws_s3_bucket.logs: Destruction complete after 3s
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 00m30s elapsed]
+module.network.aws_nat_gateway.this: Still destroying... [id=nat-1f9e5176d7a0d39f9, 00m30s elapsed]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 00m40s elapsed]
+module.network.aws_nat_gateway.this: Still destroying... [id=nat-1f9e5176d7a0d39f9, 00m40s elapsed]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 00m50s elapsed]
+module.network.aws_nat_gateway.this: Still destroying... [id=nat-1f9e5176d7a0d39f9, 00m50s elapsed]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 01m00s elapsed]
+module.network.aws_nat_gateway.this: Still destroying... [id=nat-1f9e5176d7a0d39f9, 01m00s elapsed]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 01m10s elapsed]
+module.network.aws_nat_gateway.this: Still destroying... [id=nat-1f9e5176d7a0d39f9, 01m10s elapsed]
+module.network.aws_nat_gateway.this: Destruction complete after 1m11s
+module.network.aws_internet_gateway.this: Destroying... [id=igw-0aa20e2e38df674ca]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 01m20s elapsed]
+module.network.aws_internet_gateway.this: Still destroying... [id=igw-0aa20e2e38df674ca, 00m10s elapsed]
+module.compute.aws_autoscaling_group.this: Still destroying... [id=ha-webapp-dev-compute-asg, 01m30s elapsed]
+module.network.aws_internet_gateway.this: Still destroying... [id=igw-0aa20e2e38df674ca, 00m20s elapsed]
+module.compute.aws_autoscaling_group.this: Destruction complete after 1m38s
+module.network.aws_subnet.private["us-east-1b"]: Destroying... [id=subnet-059f39ffba0a963f3]
+module.network.aws_subnet.private["us-east-1a"]: Destroying... [id=subnet-061196c4cf8f6bc96]
+module.alb.aws_lb_target_group.this: Destroying... [id=arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/ha-webapp-dev-alb-tg/f4bdf9bba1e39def]
+module.compute.aws_launch_template.this: Destroying... [id=lt-02dab84c5b77a02cc]
+module.compute.aws_launch_template.this: Destruction complete after 0s
+module.compute.aws_iam_instance_profile.this: Destroying... [id=ha-webapp-dev-compute-instance-profile]
+module.network.aws_subnet.public["us-east-1b"]: Destroying... [id=subnet-04323afe875a3811b]
+module.network.aws_subnet.public["us-east-1a"]: Destroying... [id=subnet-06bde853763442c08]
+module.compute.aws_security_group.this: Destroying... [id=sg-02b744d5375b052df]
+module.alb.aws_lb_target_group.this: Destruction complete after 1s
+module.compute.aws_iam_instance_profile.this: Destruction complete after 1s
+module.compute.aws_iam_role.this: Destroying... [id=ha-webapp-dev-compute-role]
+module.network.aws_subnet.private["us-east-1a"]: Destruction complete after 1s
+module.network.aws_subnet.public["us-east-1b"]: Destruction complete after 1s
+module.network.aws_subnet.private["us-east-1b"]: Destruction complete after 1s
+module.network.aws_subnet.public["us-east-1a"]: Destruction complete after 1s
+module.compute.aws_security_group.this: Destruction complete after 1s
+module.compute.aws_iam_role.this: Destruction complete after 0s
+module.network.aws_internet_gateway.this: Still destroying... [id=igw-0aa20e2e38df674ca, 00m30s elapsed]
+module.network.aws_internet_gateway.this: Destruction complete after 34s
+module.network.aws_vpc.this: Destroying... [id=vpc-088e67147fe9deb9d]
+module.network.aws_vpc.this: Destruction complete after 1s
+Releasing state lock. This may take a few moments...
+
+Destroy complete! Resources: 54 destroyed.
