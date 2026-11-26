@@ -24,13 +24,13 @@ configured.
 ## Repository
 
 ```text
-docs/                 Architecture, dependency diagram, and selected evidence
-envs/dev/             Root module and deployment instructions
-modules/network/      VPC, subnets, routes, NAT, and S3 endpoint
-modules/alb/          Load balancer, access logs, and optional WAF
-modules/compute/      Launch template, Auto Scaling, and instance role
-modules/observability/ Flow logs, health check, alarms, and dashboard
-validations/dev/env/  Recorded validation evidence
+docs/                   Architecture, dependency diagram, and selected evidence
+envs/dev/               Root module and deployment instructions
+modules/network/        VPC, subnets, routes, NAT, and S3 endpoint
+modules/alb/            Load balancer, access logs, and optional WAF
+modules/compute/        Launch template, Auto Scaling, and instance role
+modules/observability/  Flow logs, health check, alarms, and dashboard
+validations/dev/env/    Recorded validation evidence
 ```
 
 See the [module dependency diagram](docs/terraform_modules_dependencies.png)
