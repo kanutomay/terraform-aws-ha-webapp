@@ -10,16 +10,16 @@ configured.
 
 ## Design decisions
 
-| Decision | Rationale and trade-off |
-| --- | --- |
-| Regional NAT gateway | One gateway spreads across AZs automatically, with no per-AZ routing to manage; billed per active AZ, so it doesn’t save cost. |
-| Fixed subnet offsets | Predictably separates public and private ranges. |
-| Module-owned log buckets | Keeps ALB and VPC logs with their resource owners. |
-| Optional WAF | Defaults on outside dev; managed rules add cost. |
-| Route 53 alarm in `us-east-1` | Uses the health-check metrics region. |
-| SSM instead of SSH | Avoids inbound SSH and key management; requires IAM permissions. |
-| One-way module dependencies | Keeps infrastructure dependencies acyclic. |
-| Separate S3 backend | State bucket lives outside this stack so destroy can’t delete it. |
+| Design decision | Rationale and trade-off |
+|---|---|
+| Regional NAT gateway | One gateway expands across AZs automatically, with no per-AZ gateways or route tables to manage. Billed per active AZ, so it simplifies operations but doesn't reduce cost. |
+| Fixed subnet offsets | Public subnets take indexes 0–3 and private subnets 4–7, so adding an AZ never renumbers existing subnets (which would force their replacement). Limits the design to four AZs. |
+| Module-owned logging resources | Each log bucket lives in the module that produces the logs (ALB logs in `alb`, flow logs in `observability`), so ownership is clear and module dependencies stay one-way. |
+| WAF enabled by default outside dev | Production-like environments get managed-rule protection by default, while dev avoids the cost unless `enable_waf` overrides it. |
+| Route 53 alarms in `us-east-1` | Route 53 health-check metrics are published only in `us-east-1`, so the external-availability alarm and its SNS topic must live there whatever the deployment region. |
+| SSM instead of SSH | IAM-controlled, audited access with no inbound management ports, bastion host or key pairs. Requires the SSM agent, an instance role and an outbound path (NAT). |
+| One-way module dependencies | `network → alb → compute → observability`, wired only in the root, avoids circular references and keeps each module reusable on its own. |
+| Independently managed S3 backend | State, versioning and locking live outside this stack, so `terraform destroy` can never delete its own state. Requires a one-time bootstrap of the bucket. |
 
 ## Repository
 
