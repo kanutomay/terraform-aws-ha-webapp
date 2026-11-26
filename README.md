@@ -12,7 +12,7 @@ configured.
 
 | Decision | Rationale and trade-off |
 | --- | --- |
-| Regional NAT gateway | Simplifies multi-AZ outbound connectivity but incurs charges. |
+| Regional NAT gateway | One gateway spreads across AZs automatically, with no per-AZ routing to manage; billed per active AZ, so it doesn’t save cost. |
 | Fixed subnet offsets | Predictably separates public and private ranges. |
 | Module-owned log buckets | Keeps ALB and VPC logs with their resource owners. |
 | Optional WAF | Defaults on outside dev; managed rules add cost. |
@@ -54,7 +54,8 @@ terraform apply
 terraform destroy
 ```
 
-Confirm SNS subscriptions before testing. `destroy` leaves the state bucket.
+Confirm SNS subscriptions before testing.
+The S3 state bucket is managed separately and is not deleted by `terraform destroy`.
 
 ## Validation evidence
 
